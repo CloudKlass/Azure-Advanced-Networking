@@ -6,7 +6,7 @@ layout: home
 
 # Content Directory
 
-The Lab files, contained within the **AllFiles** folder of the zip can be [DOWNLOADED HERE](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/archive/master.zip)
+The Lab files, contained within the **AllFiles** folder of the zip can be [DOWNLOADED HERE](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/archive/master.zip)
 
 **Please Note:** Use the links to each of the lab exercises listed below *(not from the zip download above)*.
 
@@ -15,6 +15,7 @@ The Lab files, contained within the **AllFiles** folder of the zip can be [DOWNL
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Module | Lab |
 | --- | --- | 
-{% for activity in lab  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
+{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
+
 
