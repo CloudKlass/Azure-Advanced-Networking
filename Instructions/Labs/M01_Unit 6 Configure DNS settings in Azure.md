@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M01 - Unit 6 Configure DNS settings in Azure'
     module: 'Module 01 - Introduction to Azure Virtual Networks'
 ---

@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M06 - Unit 4 Configure DDoS Protection on a virtual network using the Azure portal'
     module: 'Module 06 - Design and implement network security'
 ---

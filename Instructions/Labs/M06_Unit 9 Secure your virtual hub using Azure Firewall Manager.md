@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M06 - Unit 9 Secure your virtual hub using Azure Firewall Manager'
     module: 'Module 06 - Design and implement network security'
 ---

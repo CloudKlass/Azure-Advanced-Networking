@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M02 - Unit 3 Create and configure a virtual network gateway'
     module: 'Module 02 - Design and implement hybrid networking'
 ---

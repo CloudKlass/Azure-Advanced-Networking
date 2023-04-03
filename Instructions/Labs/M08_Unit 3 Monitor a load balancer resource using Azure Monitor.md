@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M08 - Unit 3 Monitor a load balancer resource using Azure Monitor'
     module: 'Module 08 - Design and implement network monitoring'
 ---

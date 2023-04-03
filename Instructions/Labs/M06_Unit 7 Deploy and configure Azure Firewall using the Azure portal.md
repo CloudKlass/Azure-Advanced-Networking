@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M06 - Unit 7 Deploy and configure Azure Firewall using the Azure portal'
     module: 'Module 06 - Design and implement network security '
 ---

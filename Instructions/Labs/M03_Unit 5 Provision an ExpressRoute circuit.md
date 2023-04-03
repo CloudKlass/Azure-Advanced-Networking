@@ -1,5 +1,5 @@
 ---
-Exercise:
+lab:
     title: 'M03 - Unit 5 Provision an ExpressRoute circuit'
     module: 'Module 03 - Design and implement Azure ExpressRoute'
 ---
