@@ -15,6 +15,6 @@ The Lab files, contained within the **AllFiles** folder of the zip can be [DOWNL
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Module | Lab |
 | --- | --- | 
-{% for activity in exercise  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
+{% for activity in Exercise  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
 
