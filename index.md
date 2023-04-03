@@ -10,7 +10,7 @@ The Lab files, contained within the **AllFiles** folder of the zip can be [DOWNL
 
 **Please Note:** Use the links to each of the lab exercises listed below *(not from the zip download above)*.
 
-## Labs
+## Exercises
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Module | Lab |
