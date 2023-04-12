@@ -12,12 +12,12 @@ In this exercise you will configure a virtual network gateway to connect the Con
 In this exercise, you will:
 
 + Task 1: Create CoreServicesVnet and ManufacturingVnet
-+ Task 2: Create CoreServicesVM
-+ Task 3: Create ManufacturingVM
-+ Task 4: Connect to the Test VMs using RDP
-+ Task 5: Test the connection between the VMs
-+ Task 6: Create CoreServicesVnet Gateway
-+ Task 7: Create ManufacturingVnet Gateway
++ Task 2: Create CoreServicesVnet Gateway
++ Task 3: Create ManufacturingVnet Gateway
++ Task 4: Create CoreServicesVM
++ Task 5: Create ManufacturingVM
++ Task 6: Connect to the Test VMs using RDP
++ Task 7: Test the connection between the VMs
 + Task 8: CoreServicesVnet to ManufacturingVnet 
 + Task 9: Connect ManufacturingVnet to CoreServicesVnet
 + Task 10: Verify that the connections connect 
