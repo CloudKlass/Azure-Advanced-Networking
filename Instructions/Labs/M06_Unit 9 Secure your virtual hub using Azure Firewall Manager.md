@@ -419,7 +419,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 1. Open Internet Explorer and select **Ok** in the **Set up Internet Explorer 11** dialog box.
 
-1. Browse to **https://** **www.microsoft.com**.
+1. Browse to **https://www.microsoft.com**.
 
 1. On the **Security Alert** dialog box, select **OK**.
 
