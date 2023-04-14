@@ -333,7 +333,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subscription   | Select your subscription |
    | Resource group | **IntLB-RG**             |
    | Name           | **myLAworkspace**        |
-   | Region         | **West US**              |
+   | Region         | **East US**              |
 
 1. Select **Review + Create**, then select **Create**.
 
@@ -430,7 +430,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select the **AllMetrics** checkbox, then select the **Send to Log Analytics workspace** checkbox.
 
-1. Select your subscription from the list, then select **myLAworkspace (westus)** from the workspace drop-down list.
+1. Select your subscription from the list, then select **myLAworkspace (Eastus)** from the workspace drop-down list.
 
 1. Select **Save**.
 
