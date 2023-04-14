@@ -324,7 +324,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. After selecting the Connect button and RDP, select the Download RDP File button. A Remote Desktop Protocol (.rdp) file is created and downloaded to your computer.
 
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name and password you specified when creating the VM. You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM.
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name: **Testuser** and password: **TestuserPa$$w0rd!** you specified when creating the VM.  You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM.
 
 1. Select **OK**.
 
