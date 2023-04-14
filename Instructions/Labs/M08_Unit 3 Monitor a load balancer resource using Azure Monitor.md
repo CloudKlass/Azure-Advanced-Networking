@@ -166,7 +166,7 @@ In this section, you will create three VMs, that will be in the same availabilit
    | Subscription          | Select your subscription |
    | Resource group        | **IntLB-RG**             |
    | Name                  | **myIntLoadBalancer**    |
-   | Region                | **(US) West US**         |
+   | Region                | **(US) East US**         |
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
    | Tier                  | **Regional**             |
