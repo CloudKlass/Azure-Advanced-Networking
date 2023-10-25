@@ -164,8 +164,10 @@ In this exercise, you will:
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
-  
-1. When the deployment is complete, close **Cloud Shell**
+
+1. When prompted for the **adminpassword:** enter **Pa55w.rd1234??** where ***(??)*** means add your initials.
+
+1. When the deployment is complete, ***(Can take up to 10 mins to complete)*** close **Cloud Shell**
 
 1. Go to the Azure portal home page, and then select **Virtual Machines**.
 
