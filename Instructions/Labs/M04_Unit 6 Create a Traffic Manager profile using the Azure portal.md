@@ -38,7 +38,7 @@ In this section, you will create two instances of a web application deployed in 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription                                     |
-   | Resource group   | Select **Create  new**  Name: **Contoso-RG-TM1**             |
+   | Resource group   | Select **Create  new**  Name: **Contoso-RG-TM**             |
    | Name             | **ContosoWebAppEastUSxx** (where xx are your initials to make the name unique) |
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
@@ -62,7 +62,7 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
-   | Resource group | Select **Create  new**  Name: **Contoso-RG-TM2**             |
+   | Resource group | Select **Create  new**  Name: **Contoso-RG-TM**             |
    | Name           | **ContosoWebAppWestEuropexx** (where xx are your initials to make the name unique)  |
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
@@ -96,7 +96,7 @@ Now you will create a Traffic Manager profile that directs user traffic based on
    | Name                    | **Contoso-TMProfilexx** (where xx are your initials to make the name unique) |
    | Routing method          | **Priority**             |
    | Subscription            | Select your subscription |
-   | Resource group          | **Contoso-RG-TM1**       |
+   | Resource group          | **Contoso-RG-TM**       |
    | Resource group location | **East US**              |
 
 
@@ -190,7 +190,6 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
    ```powershell
 
    Remove-AzResourceGroup -Name 'Contoso-RG-TM1' -Force -AsJob
-   Remove-AzResourceGroup -Name 'Contoso-RG-TM2' -Force -AsJob
 
    ```
 
