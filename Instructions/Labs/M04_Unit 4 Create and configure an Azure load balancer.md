@@ -61,7 +61,7 @@ In this section, you will create a virtual network and a subnet.
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
     | Azure Bastion host name                      | **IntLB-Vnet-Bastion**                             |
-    | Azure Bastion Public IP address                 | Leave the default setting to create a **New** Ip Address |
+    | Azure Bastion Public IP address                 | Select: **Create a public IP address** - Accept the default name and click **OK**  |
 
 1. Click **Next**.
 
@@ -71,10 +71,6 @@ In this section, you will create a virtual network and a subnet.
 1. On the **Edit subnet blade**, under **Subnet details**: Change the Name to **MyBackendSubnet**. 
 
 1. Click **Save**
-
-1. In the warning box: ***'Azure Bastion requires a subnet named 'AzureBastionSubnet'***
-
-1. Click the link. **Add Azure Bastion subnet.**
 
 1. In the Address space section. Click **Add a subnet**   
 
@@ -138,9 +134,12 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory one by one.
+2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files ***azuredeploy.json***, ***azuredeploy.parameters.vm1.json***, ***azuredeploy.parameters.vm2.json*** and ***azuredeploy.parameters.vm3.json*** into the Cloud Shell home directory **one by one**.
 
 3. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+>**Important Note:** 
+When prompted for the User Password: For Example Use: **Pa55w.rd1234** and add your initials to the end to make it unique. (i.e: ***Pa55w.rd1234AB***) If you use any other complex password, make sure that you take note of it, it will be required in later steps,
 
    ```powershell
    $RGName = "IntLB-RG"
@@ -160,11 +159,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. On the Azure portal home page, select **Create a resource**.
 
-1. On the search box at the top of the page, type **Load Balancer**, then press **Enter** (**Note:** do not select one from the list).
+1. On the search box at the top of the page, type **Load**, then select **Load Balancers** from the ***Services list***.
 
-1. On the results page, locate and select **Load Balancer** (the one that says 'Microsoft' and 'Azure Service' under the name).
+1. In the ***Load Balancing*** Blade, make sure that ***Load Balancer*** is selected.
 
-1. Select **Create**.
+1. Select **+ Create**.
 
 1. On the **Basics** tab, use the information in the table below to create the load balancer.
 
@@ -177,7 +176,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
    | Tier                  | **Regional**             |
-
+   
 1. Select **Next: Frontend IP configurations**.
 
 1. Select **+ Add a frontend IP configuration**
@@ -190,6 +189,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Virtual network | **IntLB-VNet**           |
    | Subnet          | **myFrontEndSubnet**     |
    | Assignment      | **Dynamic**              |
+   | Availability zone | **No Zone**             |  
 
 1. Click **Add**
 
@@ -203,6 +203,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | --------------- | -------------------- |
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
+   | Backend Pool Configuration | **NIC**       |
 
 
 1. Under **IP Configurations**, select **+ Add**.
@@ -223,9 +224,9 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | ---------------------- | ------------------------ |
    | Name                   | **myHTTPRule**           |
    | IP Version             | **IPv4**                 |
-   | Frontend IP address    | **LoadBalancerFrontEnd** |
-   | Backend pool           | **myBackendPool**        |
-   | HA Ports                   | **Unchecked**                   |
+   | Frontend IP address    | Select **LoadBalancerFrontEnd** from drop-down list |
+   | Backend pool           | Select **myBackendPool** from drop-down list        |
+   | High Avaialability Ports  | **Unchecked**                   |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
    | Backend port           | **80**                   |
@@ -236,7 +237,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | **Setting**         | **Value**         |
    | ------------------- | ----------------- |
    | Name                | **myHealthProbe** |
-   | Protocol            | **HTTP**          |
+   | Protocol            | **TCP**          |
    | Port                | **80**            |
    | Path                | **/**             |
    | Interval            | **5**            |
@@ -274,8 +275,8 @@ In this section, you will create a test VM, and then test the load balancer.
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
-   | Password             | **TestPa$$w0rd!**                            |
-   | Confirm password     | **TestPa$$w0rd!**                            |
+   | Password             | **Pa55w.rd1234??** Where (??) is your initails to make the password Unique                         |
+   | Confirm password     | **Pa55w.rd1234??**   |
 
 
 1. Select **Next : Disks**, then select **Next : Networking**. 
