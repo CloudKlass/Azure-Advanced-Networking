@@ -113,7 +113,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
-   | Name                    |  **WebAppContoso-2*  |
+   | Name                    |  **WebAppContoso-2**  |
    | Origin Type             | **App Service**  | 
    | host name        | Select **WebAppContoso-2xx** |
 
