@@ -86,10 +86,11 @@ In this task, you will create a single virtual network with two subnets.
 
     | Setting | Value |
     | --- | --- |
-    | Subnet template | Select: **Azure Firewall** |
-    | Starting address | **10.0.1.0** |
+    | Name | **Workload-SN**
+    | Starting address | **10.0.2.0** |
+    | Subnet size | **/24 (256 addresses)** |
 
->**Note:** Notice that the Subnet name and Subnet size are automatically selected
+
 
 1. Click **Save**
 
@@ -99,10 +100,10 @@ In this task, you will create a single virtual network with two subnets.
 
     | Setting | Value |
     | --- | --- |
-    | Subnet template | **Default** |
-    | Name | **Workload-SN**
-    | Starting address | **10.0.2.0** |
-    | Subnet size | **/24 (256 addresses)** |
+    | Subnet template | Select: **Azure Firewall** |
+    | Starting address | **10.0.1.0** |
+
+>**Note:** Notice that the Subnet name and Subnet size are automatically selected
 
 1. Click **Add**
 
@@ -164,7 +165,8 @@ In this task, you will create the workload virtual machine and place it in the W
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
-  
+1. When prompted for the ***adminPassword*** Enter **Pa55w.rd1234??** (where ?? are your initials).
+
 1. When the deployment is complete, Close **Cloud Shell**
 
 1. Go to the Azure portal home page, and then select **Virtual Machines**.
