@@ -81,9 +81,8 @@ In this task, you will create the two spoke virtual networks each containing a s
    | Resource Group       | Select: **fw-managers-rg**            |
    | Virtual Network Name | **Spoke-02**                 |
    | Region             | **East US**                          |
-   | Address space | ***Delete default address space and add a new one***. |
+   | Address space | ***Edit the default address space using the following settings***. |
    |**Address space details** | |
-   | Address space type| **IPv4**|
    | Starting address | **10.1.0.0** |
    | Address space size | **/16 (65536 addresses)**
    |**Subnet details** | |
@@ -91,7 +90,7 @@ In this task, you will create the two spoke virtual networks each containing a s
    | Name | **Workload-02-SN** |
    | Starting address | **10.1.1.0** |
    | Subnet size | **/24 (256 addresses)**
-   | **Add subnet** and then Select **Review and create**, then **Create**
+   | **Save subnet** and then Select **Review and create**, then **Create**
 
 >If you carried out **Option 1 instructions: GO TO Task 2**
 
@@ -226,7 +225,8 @@ In this task you will connect the hub and spoke virtual networks. This is common
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
-  
+1. When prompted for ***adminpassword*** enter **Pa55w.rd1234??** (where **??** = your initials.)
+
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. On the **Overview** page of **Srv-workload-01**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.0.1.4**).
@@ -285,7 +285,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
     ![Add application rule collection to firewall policy](../media/add-rule-collection-firewall-policy-1.png)
 
-1. To add a DNAT rule so you can connect a remote desktop to the Srv-workload-01 VM, select **Add a rule collection**.
+1. To add a **DNAT rule** so you can connect a remote desktop to the Srv-workload-01 VM, select **Add a rule collection**.
 
 1. For **Name**, enter **dnat-rdp**.
 
@@ -313,7 +313,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 1. Select **Add**.
 
-1. To add a Network rule so you can connect a remote desktop from Srv-workload-01 to Srv-workload-02 VM, select **Add a rule collection**.
+1. To add a **Network rule** so you can connect a remote desktop from Srv-workload-01 to Srv-workload-02 VM, select **Add a rule collection**.
 
 1. For **Name**, enter **vnet-rdp**.
 
@@ -411,7 +411,7 @@ In this task you will test the application rule to confirm that it works as expe
 
    ![RDP connection to srv-workload-01](../media/rdp-srv-workload-01.png)
 
-1. On the **Enter your credentials** dialog box, log into the **Srv-workload-01** server virtual machine, by using the password, **TestPa$$w0rd!**.
+1. On the **Enter your credentials** dialog box, log into the **Srv-workload-01** server virtual machine, by using the password you created during the VM deployment.
 
 1. Select **OK**.
 
@@ -447,7 +447,7 @@ In this task you will test the network rule to confirm that it works as expected
 
 1. On the **Computer** box, enter the **private IP address** of **Srv-workload-02** (e.g., **10.1.1.4**).
 
-1. On the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **TestUser**, and a password of **TestPa$$w0rd!**.
+1. On the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **TestUser**, and the password you provided during the deployment.
 
 1. Select **OK**.
 
