@@ -147,12 +147,12 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select: your Subscription                                |
    | Resource group | Select: **myResourceGroup**                  |
-   | Name           | **ContosoPrivateNSG**                             |
+   | Name           | **ContosoPrivate-nsg**                             |
    | Region         | **East US**                                           |
 
 1. select **Review + create**, then select **Create**:
 
-1. After the **ContosoPrivateNSG** network security group is created, select **Go to resource**.
+1. After the **ContosoPrivate-nsg** network security group is created, select **Go to resource**.
 
 1. Under **Settings**, select **Outbound security rules**.
 
