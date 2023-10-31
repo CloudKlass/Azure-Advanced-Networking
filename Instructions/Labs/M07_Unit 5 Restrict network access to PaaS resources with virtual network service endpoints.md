@@ -267,7 +267,7 @@ The steps necessary to restrict network access to resources created through Azur
    ![Graphical user interface, application Description automatically generated](../media/new-file-share.png)
 1. Select **+ File share**.
 
-1. On the **New file share** blade Enter **marketing** under **Name**, and then select **Create**.
+1. On the **New file share** blade Enter **marketing** under **Name**, and then select **Review + Create**.
 
 ## Task 8: Restrict network access to a subnet
 
