@@ -6,8 +6,7 @@ lab:
 
 # M08-Unit 3 Monitor a load balancer resource using Azure Monitor
 
-
-In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. Then you will create a Log Analytics workspace, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. Finally, you will configure the load balancer's diagnostic settings to send metrics to the Log Analytics workspace you created. 
+In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. Then you will create a Log Analytics workspace, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. 
 
 The diagram below illustrates the environment you will be deploying in this exercise.
 
@@ -19,12 +18,10 @@ The diagram below illustrates the environment you will be deploying in this exer
 + Task 2: Create backend servers
 + Task 3: Create the load balancer
 + Task 4: Test the load balancer
-+ Task 5: Create a Log Analytics Workspace
-+ Task 6: Use Functional Dependency View
-+ Task 7: View detailed metrics
-+ Task 8: View resource health
-+ Task 9: Configure diagnostic settings
-+ Task 10: Clean up resources
++ Task 5: Use Functional Dependency View
++ Task 6: View detailed metrics
++ Task 7: View resource health
++ Task 8: Clean up resources
 
 
 
@@ -49,7 +46,7 @@ In this section, you will create a virtual network and a subnet.
 
 #### **Option 1 instructions**
 
-1. On the Create virtual networks blade, on the **Basics** tab, use the information in the following table to create the VNet:
+1. On the ***Create virtual networks*** blade, on the **Basics** tab, use the information in the following table to create the VNet:
 
    | **Setting**    | **Value**                                  |
    | -------------- | ------------------------------------------ |
@@ -60,29 +57,26 @@ In this section, you will create a virtual network and a subnet.
 
 1. Click **Next**.
 
-1. On the Create virtual networks blade, on the **Security** tab select the  **Enable Azure Bastion** tickbox, then enter the information from the table below.
+1. On the ***Create virtual networks*** blade, on the **Security** tab select the  **Enable Azure Bastion** tickbox, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
-    | Azure Bastion host name                      | **IntLB-Vnet-Bastion**                             |
-    | Azure Bastion Public IP address                 | Leave the default setting to create a **New** Ip Address |
+    | Azure Bastion host name | **IntLB-Vnet-Bastion**  |
+    | Azure Bastion Public IP address  | Select **Create a public IP address** |
+    | On the ***Add a public IP address*** blade | Select **OK** (keeping the default settings) |
 
 1. Click **Next**.
 
-1. On the Create virtual networks blade, on the **IP addresses** tab: In the **existing Address space section**,
+1. On the ***Create virtual networks*** blade, on the **IP addresses** tab: In the **existing Address space section**,
    under **Subnets**, select the **default** link.
 
 1. On the **Edit subnet blade**, under **Subnet details**: Change the Name to **MyBackendSubnet**. 
 
 1. Click **Save**
 
-1. In the warning box: ***'Azure Bastion requires a subnet named 'AzureBastionSubnet'***
-
-1. Click the link. **Add Azure Bastion subnet.**
-
 1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
 
->Wait for deployment to complete.
+>***Don't wait for deployment to complete. Go straight to Task 2***
 
 #### **Option 2 instructions**
 
@@ -133,7 +127,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory one by one from the source folder M08.
+2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files ***azuredeploy.json***, ***azuredeploy.parameters.vm1.json***, ***azuredeploy.parameters.vm2.json*** and ***azuredeploy.parameters.vm3.json*** into the Cloud Shell home directory one by one from the source folder M08.
 
 3. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -145,9 +139,12 @@ In this section, you will create three VMs, that will be in the same availabilit
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    Write-Host "Deployment complete"
    ```
+> When prompted for the ***adminpassword*** enter **Pa55w.rd1234??** (where ?? are your initials)
+> You will be prompted for the password of each machine in turn.
 
->**Note** It may take 10-20 mins to create these three VMs. 
->**Wait for the deployment to finish before moving to the next task**
+>**Note** It may take 10-15 minutes to create these three VMs.
+
+>**Wait for all 3 VM's to be deployed before moving to the next task**
 
 ## Task 3: Create the load balancer
 
@@ -183,6 +180,7 @@ In this section, you will create three VMs, that will be in the same availabilit
    | Virtual network | **IntLB-VNet**           |
    | Subnet          | **myBackEndSubnet**     |
    | Assignment      | **Dynamic**              |
+   |Availability zone | **No Zone**|
 
 1. Click **Add**
 
@@ -196,6 +194,7 @@ In this section, you will create three VMs, that will be in the same availabilit
    | --------------- | -------------------- |
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
+   |Backend pool configuration | **NIC** (default)|
 
 
 1. Under **IP Configurations**, select **+ Add**.
@@ -216,8 +215,8 @@ In this section, you will create three VMs, that will be in the same availabilit
    | ---------------------- | ------------------------ |
    | Name                   | **myHTTPRule**           |
    | IP Version             | **IPv4**                 |
-   | Frontend IP address    | **LoadBalancerFrontEnd** |
-   | Backend pool           | **myBackendPool**        |
+   | Frontend IP address    | Select **LoadBalancerFrontEnd** from drop down list |
+   | Backend pool           | Select **myBackendPool** from drop down list       |
    | HA Ports                   | **Unchecked**                   |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
@@ -234,9 +233,9 @@ In this section, you will create three VMs, that will be in the same availabilit
    | Path                | **/**             |
    | Interval            | **5**            |
 
-1. Select **OK**
+1. Select **Save**
 
-1. Back on the **Add load balancing rule** blade: click **Add**
+1. Back on the **Add load balancing rule** blade: click **Save**
 
 1. Back on the **Create load balancer** blade: click **Review + create**
 
@@ -267,8 +266,8 @@ In this section, you will create a test VM, and then test the load balancer.
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
-   | Password             | **TestPa$$w0rd!**                            |
-   | Confirm password     | **TestPa$$w0rd!**                            |
+   | Password             | **Pa55w.rd1234??** (where ?? are your initials)                            |
+   | Confirm password     | **Re-Enter your password as above**                            |
 
 
 1. Select **Next : Disks**, then select **Next : Networking**. 
@@ -299,7 +298,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select **Use Bastion**.
 
-1. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then select **Connect**.
+1. In the **Username** box, type **TestUser** and in the **Password** box, type **Pa55w.rd1234??** (?? = your initials), then select **Connect**.
 
 1. The **myTestVM** window will open in another browser tab.
 
@@ -318,40 +317,13 @@ In this section, you will create a test VM, and then test the load balancer.
 
     ![Browser window showing Hello World response from VM3](../media/load-balancer-web-test-2.png)
 
-## Task 5: Create a Log Analytics Workspace
-
-1. On the Azure portal home page, select **More services**, then in the search box at the top of the page type **Log Analytics**, and select **Log Analytics workspaces** from the filtered list.
-
-   ![Accessing Log Analytics workspaces from the Azure portal home page](../media/log-analytics-workspace-1.png)
-
-1. Select **+ Create**. 
-
-1. On the **Create Log Analytics workspace** page, on the **Basics** tab, use the information in the table below to create the workspace.
-
-   | **Setting**    | **Value**                |
-   | -------------- | ------------------------ |
-   | Subscription   | Select your subscription |
-   | Resource group | **IntLB-RG**             |
-   | Name           | **myLAworkspace**        |
-   | Region         | **East US**              |
-
-1. Select **Review + Create**, then select **Create**.
-
->Wait for deployment to complete.
-
-   ![Log Analytics workspaces list](../media/log-analytics-workspace-2.png)
-
-
-
-## Task 6: Use Functional Dependency View
+## Task 5: Use Functional Dependency View
 
 1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer**.
 
    ![All resources list in the Azure portal](../media/network-insights-functional-dependency-view-1.png)
 
 1. Under **Monitoring**, select **Insights**.
-
-1. In the top right corner of the page, select the **X** to close the **Metrics** pane for now. You will open it again shortly.
 
 1. This page view is known as Functional Dependency View, and in this view, you get a useful interactive diagram, which illustrates the topology of the selected network resource - in this case a load balancer. For Standard Load Balancers, your backend pool resources are color-coded with Health Probe status indicating the current availability of your backend pool to serve traffic.
 
@@ -361,9 +333,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
-1. To download a .SVG file copy of the topology diagram, select **Download topology**, and save the file in your **Downloads** folder. 
-
-1. In the top right corner, select **View metrics** to reopen the metrics pane on the right-hand side of the screen.
+1. On the Insight header bar, select **Show metrics Pane** to reopen the metrics pane on the right-hand side of the screen.
     ![Azure Monitor Network Insights functional dependency view - View metrics button highlighted](../media/network-insights-functional-dependency-view-3.png)
 
 1. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts.
@@ -374,7 +344,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
  
 
-## Task 7: View detailed metrics
+## Task 6: View detailed metrics
 
 1. To view more comprehensive metrics for this network resource, select **View detailed metrics**.
    ![Azure Monitor Network Insights - View detailed metrics button highlighted](../media/network-insights-detailedmetrics-1.png)
@@ -396,7 +366,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
  
 
-## Task 8: View resource health
+## Task 7: View resource health
 
 1. To view the health of your Load Balancer resources, on the Azure portal home page, select **More services**, then search for and select **Monitor**.
 
@@ -416,31 +386,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
  
 
-## Task 9: Configure diagnostic settings
-
-1. On the Azure portal home page, select **Resource groups**, then select the **IntLB-RG** resource group from the list.
-
-1. On the **IntLB-RG** page, select the name of the **myIntLoadBalancer** load balancer resource in the list of resources.
-
-1. Under **Monitoring**, select **Diagnostic settings**, then select **Add diagnostic setting**.
-
-   ![Diagnostic settings>Add diagnostic setting button highlighted](../media/diagnostic-settings-1.png)
-
-1. On the **Diagnostic setting** page, in the name box, type **myLBDiagnostics**.
-
-1. Select the **AllMetrics** checkbox, then select the **Send to Log Analytics workspace** checkbox.
-
-1. Select your subscription from the list, then select **myLAworkspace (Eastus)** from the workspace drop-down list.
-
-1. Select **Save**.
-
-   ![Diagnostic setting page for load balancer](../media/diagnostic-settings-2.png)
-
- 
-
- 
-
-## Task 10: Clean up resources
+## Task 8: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
