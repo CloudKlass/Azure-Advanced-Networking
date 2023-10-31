@@ -263,15 +263,24 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. After the storage account is created, Select **Go to resource**.
 
-1. Select **File shares**, as shown in the following picture: 
-   ![Graphical user interface, application Description automatically generated](../media/new-file-share.png)
-1. Select **+ File share**.
+1. In the **Storage account blade**, under **Data storage**.
 
-1. On the **New file share** blade Enter **marketing** under **Name**, and then select **Review + Create**.
+1. Select **File shares**, and select **+ File share**.
+
+1. On the **New file share** blade Enter **marketing** under **Name**, and then select **Next : Backup**., as shown in the following picture: 
+   ![Graphical user interface, application Description automatically generated](../media/new-file-share.png)
+
+1. On the Backup tab, **De-Select** the ***Enable backup*** tickbox
+
+1. Select **Review + Create**, and when validation has passed, select **Create**
+
+1. Go back to the ***overview*** page of the **contosostoragexx** storage account.
 
 ## Task 8: Restrict network access to a subnet
 
 By default, storage accounts accept network connections from clients in any network, including the internet. Deny network access from the internet, and all other subnets in all virtual networks, except for the Private subnet in the CoreServicesVNet virtual network.
+
+1. In the **contosostoragexx** Storage Account.
 
 1. Under **Security + networking** for the storage account, select **Networking**.
 
@@ -313,9 +322,9 @@ To test network access to a storage account, deploy a VM to each subnet.
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
-  
-1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+1. When prompted for the ***adminpassword*** enter **Pa55w.rd1234??** (where ?? are your initials to make the password unique).
 
+1. When the deployment is complete (the deployment can take a few minutes), Minimise **Cloud Shell** and then go to the Azure portal home page, and then select **Virtual Machines**.
 
 ## Task 10: Confirm access to storage account
 
