@@ -24,6 +24,9 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 1. Find and open **parameters.json** in M07 folder. Open it in Notepad and find the line "value": "GEN-UNIQUE". Replace the placeholder GEN-UNIQUE string with a unique value for your webapp name. Save this change.
 
+> You could use a name, for example: (***mywebapp***) + initials (***dpb***) + today's date (***311023***) = **mywebappdpb311023** to create a globally unique name.
+
+
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **template.json** and **parameters.json** into the Cloud Shell home directory one by one.
@@ -137,7 +140,9 @@ New-AzBastion @parameters3
 ```
 
 
-> Wait for deployment to complete before moving to the next task.
+> Don't forget to press enter to run the last command (***New-AzBastion @parameters3***) when prompted, then wait for the deployment to finish before moving on to the next task.
+
+> Bastion Host deployment can take up to 15 minutes ***(good time for a coffee break)***.
 
 ## Task 3: Create a test virtual machine
 
@@ -145,7 +150,7 @@ In this section, you'll create a virtual machine that will be used to test the P
 
 - Create the virtual machine with:
 
-- Get-Credential (Note: when prompted enter a local admin account credentials for the VM (i.e. Student and Pa55w.rd1234)).
+- Get-Credential 
 
 - New-AzNetworkInterface
 
@@ -222,8 +227,9 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 
 ```
+> (Note: **when prompted enter a local admin account credentials for the VM** (i.e. ***Testuser and Pa55w.rd1234??*** (where ?? are your initials))).
 
-> Wait for the deployment to complete.
+> Don't forget to press enter when prompted to run the last command (***New-AzVM etc.***). Then wait for the deployment to complete (Should take about 5 minutes).
 
 
 Azure provides an ephemeral IP for Azure Virtual Machines which aren't assigned a public IP address, or are in the backend pool of an internal Basic Azure Load Balancer. The ephemeral IP mechanism provides an outbound IP address that isn't configurable.
@@ -290,7 +296,7 @@ $parameters2 = @{
 New-AzPrivateEndpoint @parameters2 
 ```
 
-
+> Don't forget to press enter when prompted for the last command (***New-AzPrivateEndpoint @parameters 2***). Wait for the deployment to complete (should take about 2 minutes).
 
 
 ## Task 5: Configure the private DNS zone
@@ -366,7 +372,9 @@ $parameters4 = @{
 
 New-AzPrivateDnsZoneGroup @parameters4 
 ```
+> Don't forget to press enter when prompted to run the last command (***New-AzPrivateDnsZoneGroup @parameters4***). Then wait for the deployment to complete (Should take about 2 minutes).
 
+1. On Completion of deployment, close **Cloud Shell**
 
 ## Task 6: Test connectivity to the Private Endpoint
 
@@ -380,13 +388,13 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. Select **myVM**.
 
-1. On the overview page for **myVM**, select **Connect** then **Bastion**.
+1. On the overview page for **myVM**, select **Connect** then select **Go to Bastion**.
 
-1. Enter the username and password that you entered during the virtual machine creation.
+1. Enter the username and password that you entered during the virtual machine creation and select **Connect**.
 
 1. Open Windows PowerShell on the server after you connect.
 
-1. Enter nslookup **&lt;your- webapp-name&gt;**.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
+1. Enter **nslookup ***&lt;your- webapp-name&gt;***.azurewebsites.net**. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
   ```
   Server: UnKnown
@@ -407,7 +415,7 @@ A private IP address of **10.0.0.5** is returned for the web app name. This addr
 
 1. In the bastion connection to **myVM**, open Internet Explorer.
 1. Enter the url of your web app, **https://&lt;your-webapp-name&gt;.azurewebsites.net**
-1. You'll receive the default web app page if your application hasn't been deployed:
+1. You'll receive the default web app page if your application has been deployed:
   ![screen shot of page in Azure indicating an app service is up and running](../media/web-app-default-page.png)
 1. Close the connection to **myVM**. 
 
