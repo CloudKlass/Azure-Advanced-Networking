@@ -367,9 +367,9 @@ You receive no replies because the network security group associated to the Priv
 
 1. Enter ContosoPublic In the **Search resources, services, and docs** box at the top of the portal.
 
-1. When **ContosoPublic** appears in the search results, select it.
+1. When **ContosoPublic** ***(Virtual machine)*** appears in the search results, select it.
 
-1. Complete steps 1-6 in the Confirm access to storage account task for the ContosoPublic VM.  
+1. Repeat steps ***1-6 from Task 10: Confirm access to storage account*** task for the **ContosoPublic VM**.  
      
    ‎After a short wait, you receive a New-PSDrive : Access is denied error. Access is denied because the ContosoPublic VM is deployed in the Public subnet. The Public subnet does not have a service endpoint enabled for Azure Storage. The storage account only allows network access from the Private subnet, not the Public subnet.
 
