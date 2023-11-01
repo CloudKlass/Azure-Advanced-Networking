@@ -88,7 +88,7 @@ In this exercise, you will:
 
  
 
-| **Tab**      | **Option**         | **Value**            |
+| **Tab**      |  **Option**        | **Value**            |
 | ------------ | ------------------ | -------------------- |
 | Basics       | Resource Group     | ContosoResourceGroup |
 |              | Name               | CoreServicesVnet     |
@@ -99,16 +99,16 @@ In this exercise, you will:
 
  5. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
-| **Subnet**             | **Option**           | **Value**              |
-| ---------------------- | -------------------- | ---------------------- |
-| GatewaySubnet          | Subnet name          | GatewaySubnet          |
-|                        | Subnet address range | 10.20.0.0/27           |
-| SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
-|                        | Subnet address range | 10.20.10.0/24          |
-| DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
-|                        | Subnet address range | 10.20.20.0/24          |
-| PublicWebServiceSubnet | Subnet name          | PublicWebServiceSubnet |
-|                        | Subnet address range | 10.20.30.0/24          |
+| **Subnet**             | **Subnet Template**  | **Option**           | **Value**              |
+| ---------------------- | ------------------   | -------------------- | ---------------------- |
+| GatewaySubnet          | Virtual Network Gateway |Subnet name          | GatewaySubnet (default)         |
+|                        | |Subnet address range | 10.20.0.0/27           |
+| SharedServicesSubnet   | Default|Subnet name          | SharedServicesSubnet   |
+|                        | |Subnet address range | 10.20.10.0/24          |
+| DatabaseSubnet         | Default|Subnet name          | DatabaseSubnet         |
+|                        | |Subnet address range | 10.20.20.0/24          |
+| PublicWebServiceSubnet | Default|Subnet name          | PublicWebServiceSubnet |
+|                        | |Subnet address range | 10.20.30.0/24          |
 
  6. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
@@ -128,16 +128,16 @@ In this exercise, you will:
 
 
 
-| **Subnet**                | **Option**           | **Value**                 |
-| ------------------------- | -------------------- | ------------------------- |
-| ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
-|                           | Subnet address range | 10.30.10.0/24             |
-| SensorSubnet1             | Subnet name          | SensorSubnet1             |
-|                           | Subnet address range | 10.30.20.0/24             |
-| SensorSubnet2             | Subnet name          | SensorSubnet2             |
-|                           | Subnet address range | 10.30.21.0/24             |
-| SensorSubnet3             | Subnet name          | SensorSubnet3             |
-|                           | Subnet address range | 10.30.22.0/24             |
+| **Subnet**                | **Subnet Template** | **Option**           | **Value**                 |
+| ------------------------- | ------------------| -------------------- | ------------------------- |
+| ManufacturingSystemSubnet | Default|Subnet name          | ManufacturingSystemSubnet |
+|                           | |Subnet address range | 10.30.10.0/24             |
+| SensorSubnet1             | Default|Subnet name          | SensorSubnet1             |
+|                           | |Subnet address range | 10.30.20.0/24             |
+| SensorSubnet2             | Default|Subnet name          | SensorSubnet2             |
+|                           | |Subnet address range | 10.30.21.0/24             |
+| SensorSubnet3             | Default|Subnet name          | SensorSubnet3             |
+|                           | |Subnet address range | 10.30.22.0/24             |
  
 
 ## Task 4: Create the ResearchVnet virtual network and subnets
@@ -150,10 +150,10 @@ In this exercise, you will:
 |              | Region             | Southeast Asia       |
 | IP Addresses | IPv4 address space | 10.40.0.0/16         |
 
-| **Subnet**           | **Option**           | **Value**            |
-| -------------------- | -------------------- | -------------------- |
-| ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
-|                      | Subnet address range | 10.40.0.0/24         |
+| **Subnet**           | **Subnet Template**| **Option**           | **Value**            |
+| -------------------- | --------------------| -------------------- | -------------------- |
+| ResearchSystemSubnet | Default|Subnet name          | ResearchSystemSubnet |
+|                      | |Subnet address range | 10.40.0.0/24         |
  
 
 ## Task 5: Verify the creation of VNets and Subnets
