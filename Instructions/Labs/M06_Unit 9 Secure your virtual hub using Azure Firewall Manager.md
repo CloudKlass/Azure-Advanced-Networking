@@ -26,7 +26,7 @@ In this exercise, you will:
 + Task 9: Test the network rule
 + Task 10: Clean up resources
 
-#### Estimated time: 35 minutes
+#### Estimated time: 60 minutes
 
 ## Task 1: Create two spoke virtual networks and subnets
 
