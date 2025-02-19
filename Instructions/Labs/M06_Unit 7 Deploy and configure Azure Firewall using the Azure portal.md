@@ -55,15 +55,6 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **Create**
 
->**Important Note:** 
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:     
-*"Basics* | **Security** | **IP Addressess** | *Tags* | *Review + Create*". Use **Option 1 instructions**.
-
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
-*"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
-
-#### **Option 1 instructions**
-
 1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
    | **Setting**          | **Value**                        |
@@ -108,47 +99,6 @@ In this task, you will create a single virtual network with two subnets.
 1. Click **Add**
 
 1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
-
-1. **GO TO Task 3**
-
-#### **Option 2 instructions**
-
-1. On the Azure portal home page, in the search box, type **virtual network** and select **Virtual Network** when it appears.
-
-1. Select **Create**.
-
-1. Select the **Test-FW-RG** resource group you created previously.
-
-1. In the **Name** box, enter **Test-FW-VN**.
-
-   ![Create a virtual network - Basics tab](../media/create-vnet-basics-for-azure-firewall.png)
-
-1. Select **Next: IP Addresses**. Enter IPv4 address space **10.0.0.0/16** if not already there by default. 
-
-1. Under **Subnet name**, select the word **default**.
-
-1. In the **Edit subnet** dialog box, change the name to **AzureFirewallSubnet**.
-
-1. Change the **Subnet address range** to **10.0.1.0/26**.
-
-1. Select **Save**.
-
-1. Select **Add subnet**, to create another subnet, which will host the workload server that you will create shortly.
-
-
-    ![Add subnet](../media/add-workload-subnet.png)
-    
-1. In the **Edit subnet** dialog box, change the name to **Workload-SN**.
-
-1. Change the **Subnet address range** to **10.0.2.0/24**.
-
-1. Select **Add**.
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
- 
 
 ## Task 3: Create a virtual machine
 
@@ -212,6 +162,10 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | Choose a virtual network | Select: **Use existing**  |
    | Virtual network     | Select **Test-FW-VN** from drop-down list.                           |
    
+>**Note:** If you get an Error message about Force Tunneling then **De-Select** the tick box for **'Enable Firewall Management NIC'**. 
+
+
+1. Add a new Public IP Address
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Public IP address        | Select **Add new**|
