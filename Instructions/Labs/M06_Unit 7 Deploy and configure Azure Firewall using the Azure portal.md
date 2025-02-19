@@ -166,30 +166,31 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 
 1. Add a new Public IP Address
+   
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Public IP address        | Select **Add new**|
    | Name                     | **fw-pip**        |
 
-1. Click **OK**
+2. Click **OK**
 
    ![Add public IP address to firewall](../media/assign-public-ip-to-firewall.png)
 
-1. Review all the settings to ensure they match the screenshot below.
+3. Review all the settings to ensure they match the screenshot below.
 
    ![Create a firewall - review settings](../media/review-all-configurations-for-firewall.png)
 
-1. Select **Review + create**.
+4. Select **Review + create**.
 
-1. Select **Create** and wait for the firewall deployment to complete.
+5. Select **Create** and wait for the firewall deployment to complete.
 
-1. When deployment of the firewall is completed, select **Go to resource**.
+6. When deployment of the firewall is completed, select **Go to resource**.
 
-1. On the **Overview** page of **Test-FW01**, on the right of the page, take a note of the **Firewall private IP** for this firewall (e.g., **10.0.1.4**).
+7. On the **Overview** page of **Test-FW01**, on the right of the page, take a note of the **Firewall private IP** for this firewall (e.g., **10.0.1.4**).
 
-1. In the menu on the left, under **Settings**, select **Public IP configuration**.
+8. In the menu on the left, under **Settings**, select **Public IP configuration**.
 
-1. Take a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**).
+9.  Take a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**).
 
  
 
