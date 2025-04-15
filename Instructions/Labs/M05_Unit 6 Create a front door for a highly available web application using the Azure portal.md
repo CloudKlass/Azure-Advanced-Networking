@@ -42,7 +42,7 @@ This exercise requires two instances of a web application that run in different 
    | Resource group   | Select the resource group **ContosoResourceGroup**               |
    | Name             | Enter a unique Name for your web app. This example uses **WebAppContoso-1xx**. where **xx** are your initials. |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
+   | Runtime stack    | Select **.NET 8 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US**.                                       |
    | Windows Plan     | Select **Create new** Name: **myAppServicePlanEastUS**. |
@@ -67,7 +67,7 @@ This exercise requires two instances of a web application that run in different 
    | Resource group   | Select the resource group **ContosoResourceGroup**               |
    | Name             | Enter a unique Name for your web app. This example uses **WebAppContoso-2xx**. where **xx** are your initials.|
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
+   | Runtime stack    | Select **.NET 8 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US 2**.                                          |
    | Windows Plan     | Select **Create new** Name: **myAppServicePlanEastUS2**. |
