@@ -35,8 +35,7 @@ In this exercise, you will:
 
    ```powershell
    $RGName = "ContosoResourceGroup"
-   #create resource group if it doesnt exist
-   New-AzResourceGroup -Name $RGName -Location "eastus"
+   New-AzResourceGroup -Name $RGName -Location "eastus"  #creates the resource group if it doesnt exist
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
@@ -57,7 +56,6 @@ In this exercise, you will:
    |                 |                   | Region                                      | East US                      |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | VPN type                                    | Route-based                  |
-   |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | CoreServicesVnet             |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
@@ -85,9 +83,8 @@ In this exercise, you will:
    | Basics          | Project Details   | Subscription                                | No changes required          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
-   |                 |                   | Region                                      | West Europe                  |
+   |                 |                   | Region                                      | North Europe                  |
    |                 |                   | Gateway type                                | VPN                          |
-   |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | ManufacturingVnet            |
