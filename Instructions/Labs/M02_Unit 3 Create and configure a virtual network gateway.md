@@ -133,7 +133,7 @@ In this exercise, you will:
    ```powershell
    $RGName = "ContosoResourceGroup"
    
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json -asjob
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
