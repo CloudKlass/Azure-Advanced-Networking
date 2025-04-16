@@ -243,7 +243,7 @@ In this exercise, you will:
    | IKE Protocol                   | IKEv2                             |
    | Subscription                   | No changes required               |
    | Resource group                 | No changes required               |
-   | Location                       | West Europe                       |
+   | Location                       | North Europe                      |
 
 1. To create the connection, select **OK**.
 
