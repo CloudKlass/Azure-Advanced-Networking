@@ -208,6 +208,7 @@ In this exercise, you will:
    | ------------------------------ | --------------------------------- |
    | Name                           | CoreServicesGW-to-ManufacturingGW |
    | Connection type                | VNet-to-VNet                      |
+   | Location                       | East US                           |
    | First virtual network gateway  | CoreServicesVnetGateway           |
    | Second virtual network gateway | ManufacturingVnetGateway          |
    | Shared key (PSK)               | abc123                            |
@@ -216,7 +217,6 @@ In this exercise, you will:
    | IKE Protocol                   | IKEv2                             |
    | Subscription                   | No changes required               |
    | Resource group                 | No changes required               |
-   | Location                       | East US                           |
 
 1. To create the connection, select **OK**.
    
@@ -235,6 +235,7 @@ In this exercise, you will:
    | ------------------------------ | --------------------------------- |
    | Name                           | ManufacturingGW-to-CoreServicesGW |
    | Connection type                | VNet-to-VNet                      |
+   | Location                       | North Europe                      |
    | First virtual network gateway  | ManufacturingVnetGateway          |
    | Second virtual network gateway | CoreServicesVnetGateway           |
    | Shared key (PSK)               | abc123                            |
@@ -243,7 +244,6 @@ In this exercise, you will:
    | IKE Protocol                   | IKEv2                             |
    | Subscription                   | No changes required               |
    | Resource group                 | No changes required               |
-   | Location                       | North Europe                      |
 
 1. To create the connection, select **OK**.
 
