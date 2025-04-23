@@ -7,6 +7,8 @@ lab:
 
 In this exercise, you will create an ExpressRoute circuit using the Azure portal and the Azure Resource Manager deployment model. 
 
+>**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
 #### Estimated time: 15 minutes
 
 ![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram.png)
@@ -18,8 +20,7 @@ In this exercise, you will:
 + Task 1: Create and provision an ExpressRoute circuit
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
-+ Task 4: Connect an ExpressRoute circuit to a Virtual Network Gateway
-+ Task 5: Clean up resources
++ Task 4: Clean up resources
 
 
 ## Task 1: Create and provision an ExpressRoute circuit
@@ -121,24 +122,7 @@ In this exercise, you will:
 
 Congratulations! You have created an ExpressRoute circuit and located the Service key, which you would need to complete the provisioning of the circuit.
 
-## Task 3: Connect an ExpressRoute circuit to the Virtual Network Gateway
-
-1. On any Azure Portal page, in **Search resources, services and docs**, enter **Virtual**, and then select **Virtual Network Gateways** from the results.
-
-1. On the **Virtual network gateways** blade: Select **CoreServicesVnetGateway**.
-
-1. On the **CoreServicesVnetGateway** blade, In the 'Settings' menu: select **Connections**.
-
-1. Click **+ Add**
-
-1. On the **Add connection** blade, select the **Connection type** drop down list and select **Expressroute**.
-
-1. Click on **ExpressRoute circuit - Choose a circuit**.
-
->**Note:**  On the **Choose circuit** blade:  you would select the **TestERCircuit** entry, but due to the ExpressRoute Circuit not being provisioned, the entry remains greyed out and the exercise cannot be completed:
-
-
-## Task 4: Deprovisioning an ExpressRoute circuit and the Virtual Network Gateway.
+## Task 3: Deprovisioning an ExpressRoute circuit.
 
 If the ExpressRoute circuit service provider provisioning state is **Provisioning** or **Provisioned,** you must work with your service provider to deprovision the circuit on their side. Microsoft can continue to reserve resources and bill you until the service provider completes deprovisioning the circuit and notifies us.
 
