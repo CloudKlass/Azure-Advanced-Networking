@@ -16,6 +16,8 @@ In this exercise, you will:
 + Task 3: Create Virtual Machines to test the configuration
 + Task 4: Verify records are present in the DNS zone
 
+>**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
 #### Estimated time: 25 minutes
 
 ## Task 1: Create a private DNS Zone
@@ -33,17 +35,19 @@ In this exercise, you will:
 | --------------- | -------------------------------------- | -------------------- |
 | Basics          | Resource group                         | ContosoResourceGroup |
 |                 | Name                                   | Contoso.com          |
-| Tags            | No changes required                    |                      |
-| Select **Review + create** | Wait for validation to complete: Review your settings and select **Create** |                      |
+| Tags            | No changes required
 
+>**Important Note:** If you are prompted that **Contoso.com** is reserved, Check that you are creating a **Private DNS Zone** and not a **DNS Zone**.
 
-5. Wait until the deployment is complete, and then select **Go to resource**.
+Select **Review + create** Wait for validation to complete: Review your settings and select **Create** 
 
-6. Verify that the zone has been created.
+1. Wait until the deployment is complete, and then select **Go to resource**.
+
+2. Verify that the zone has been created.
 
 ## Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings**, select **Virtual network links**.
+1. In **Contoso.com**, under **Settings**, select **Virtual network links**.
 
 2. On Contoso.com | Virtual network links, select **+ Add**.
 
@@ -57,7 +61,7 @@ In this exercise, you will:
 | Subscription                        | No changes required                     |
 | Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
 | Enable auto registration            | Selected                                |
-| Review your settings and select **OK**. |                                         |
+| Review your settings and select **Create**. |                                         |
 
 
 >Note: You do not need to wait for completion, carry on with the next step.
@@ -70,7 +74,7 @@ In this exercise, you will:
 | Subscription                        | No changes required                      |
 | Virtual Network                     | ManufacturingVnet (ContosoResourceGroup) |
 | Enable auto registration            | Selected                                 |
-| Review your settings and select **OK**. |                                          |
+| Review your settings and select **Create**. |                                          |
 
 
 
@@ -82,7 +86,7 @@ In this exercise, you will:
 | Subscription                        | No changes required                 |
 | Virtual Network                     | ResearchVnet (ContosoResourceGroup) |
 | Enable auto registration            | Selected                            |
-| Review your settings and select **OK**. |                                     |
+| Review your settings and select **Create**. |                                     |
 
 
 6. Select **Refresh**: It may take upto 20 seconds before all 3 Network links show in the blade.
@@ -95,13 +99,16 @@ In this exercise, you will:
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
-1. On the Azure portal, open a **PowerShell** session within the **Cloud Shell** pane.
-    
-    > **Note:** If this is the first time opening Cloud Shell, you might be prompted to create a storage account. Select **Create storage**.
+1. In the Azure portal, select the Cloud Shell icon (top right). If necessary, configure the shell.  
+    + Select **PowerShell**.
+    + Select **No Storage Account required** and your **Subscription**, then select **Apply**.
+    + Wait for the terminal to create and a prompt to be displayed. 
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **Allfiles\Exercises\M01**.
+1. On the toolbar of the Cloud Shell pane, select the **Manage Files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M01**.
 
 3. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+>**Note**: You will be prompted to provide an Admin password.  Use **Pa55w.rd1234abc**
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -137,7 +144,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 2. Select **TestVM1**.
 
-3. On TestVM1, select **Connect &gt; RDP**.
+3. On TestVM1, select **Connect &gt; Connect**.
 
 ![TestVM1 with Connect and RDP highlighted.](../media/connect-to-am.png)
 
@@ -149,13 +156,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 7. Select **TestVM2**.
 
-8. On TestVM2, select **Connect &gt; RDP**.
+8. On TestVM2, select **Connect &gt; Connect**.
 
 9. On TestVM2 | Connect, select **Download RDP file**.
 
 10. Save the RDP file to your desktop.
 
-11. Connect to **TestVM1** using the RDP file, and the username **TestUser** and the password **TestPa$$w0rd!**.
+11. Connect to **TestVM1** using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
 12. If prompted, in **Networks**, select **Yes**.
 
