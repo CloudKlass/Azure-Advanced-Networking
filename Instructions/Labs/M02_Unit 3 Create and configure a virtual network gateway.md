@@ -23,21 +23,28 @@ In this exercise, you will:
 + Task 10: Verify that the connections connect 
 + Task 11: Test the connection between the VMs
 
-#### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
+>**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
+### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. In the Azure portal, select the Cloud Shell icon (top right). If necessary, configure the shell.  
+    + Select **PowerShell**.
+    + Select **No Storage Account required** and your **Subscription**, then select **Apply**.
+    + Wait for the terminal to create and a prompt to be displayed. 
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **Allfiles\Exercises\M02**
+1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
    ```powershell
    $RGName = "ContosoResourceGroup"
-   New-AzResourceGroup -Name $RGName -Location "eastus"  #creates the resource group if it doesnt exist
+   #create resource group if it doesnt exist
+   New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
+
 
 ## Task 2: Create CoreServicesVnet Gateway
 
@@ -105,9 +112,11 @@ In this exercise, you will:
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **Allfiles\Exercises\M02**.
+1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+   >**Note**: You will be prompted to provide an Admin password.  Use **Pa55w.rd1234abc**
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -123,15 +132,18 @@ In this exercise, you will:
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **Allfiles\Exercises\M02**.
+1. 1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+   >**Note**: You will be prompted to provide an Admin password.  Use **Pa55w.rd1234abc**
 
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
+  
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -144,25 +156,25 @@ In this exercise, you will:
 
 1. Select **ManufacturingVM**.
 
-1. On **ManufacturingVM**, select **Connect &gt; RDP**.
+1. On **ManufacturingVM**, select **Connect &gt; Connect**.
 
 1. On **ManufacturingVM | Connect**, select **Download RDP file**.
 
 1. Save the RDP file to your desktop.
 
-1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password **TestPa$$w0rd!**. After connecting, minimize the RDP session.
+1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**. After connecting, minimize the RDP session.
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
 1. Select **CoreServicesVM**.
 
-1. On **CoreServicesVM**, select **Connect &gt; RDP**.
+1. On **CoreServicesVM**, select **Connect &gt; Connect**.
 
 1. On **CoreServicesVM | Connect**, select **Download RDP file**.
 
 1. Save the RDP file to your desktop.
 
-1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and the password **TestPa$$w0rd!**.
+1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
 1. On both VMs, in **Networks**, select **Yes**.
 
