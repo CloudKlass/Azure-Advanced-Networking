@@ -7,7 +7,11 @@ lab:
 
 ## Deploy ExpressRoute gateways
 
-To connect your Azure virtual network and your on-premises network via ExpressRoute, you must create a virtual network gateway first. A virtual network gateway serves two purposes: to exchange IP routes between the networks and to route network traffic. 
+![Diagram of virtual network gateway.](../media/4-exercise-configure-expressroute-gateway.png)
+
+To connect your Azure virtual network and your on-premises network via ExpressRoute, you must create a virtual network gateway first. A virtual network gateway serves two purposes: to exchange IP routes between the networks and to route network traffic.
+
+   >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20an%20ExpressRoute%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 
 #### Estimated time: 60 minutes (includes ~45 minutes deployment waiting time)
@@ -35,89 +39,41 @@ In this exercise, you will:
 
 1. On the Virtual networks page, select **+Create**.
 
->**Important Note:** 
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:     
-*"Basics* | **Security** | **IP Addressess** | *Tags* | *Review + Create*". Use **Option 1 instructions**.
-
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
-*"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
-
-#### **Option 1 instructions**
-
 1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
    | **Setting**          | **Value**                        |
    | -------------------- | -------------------------------- |
    | Virtual Network Name | CoreServicesVNet                 |
-   | Resource Group       | ContosoResourceGroup             |
-   | Location             | East US                          |
+   | Resource Group       | ContosoResourceGroup (create new if required)            |
+   | Location             | North Europe                          |
 
 1. Click **Next**.
 
 1. On the **Security** blade.Click **Next**.
 
-1. On the **IP addresses** blade: In the **existing Address space section**, select the three dots and click **Delete address space**
-
-1. On the IP addresses blade, Click **Add an IP address space**
-
-1. On the **Add an IP address space** blade: Enter the following values
-
-    | Setting | Value |
-    | --- | --- |
-    | Address space type | **IPv4** |
-    | Starting address | **10.20.0.0** |
-    | Address space size | **/16** |
-
-1. Click **Add**.
-
-1.Back on the **IP addresses blade**: In the new address space section. Click **Add an subnet**
-
-1. Create a subnet with the following **Subnet settings** (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Subnet template | **Virtual Network Gateway** |
-    | Name | **GatewaySubnet**
-    | Starting address | **10.20.0.0** |
-    | Subnet size | **/27 (32 addresses)** |
-
-1. Click **Add**
-
-1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
-
-#### **Option 2 instructions**
-
-
-1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
-
-   | **Setting**          | **Value**                        |
-   | -------------------- | -------------------------------- |
-   | Virtual Network Name | CoreServicesVNet                 |
-   | Resource Group       | ContosoResourceGroup             |
-   | Location             | East US                          |
-
 1. Select **Next : IP addresses**.
 
-1. On the **IP Addresses** tab, in **IPv4 address space**, enter 10.20.0.0/16, and then select **+ Add subnet**. 
+1. On the **IP Addresses** tab, in **IPv4 address space**, enter **10.20.0.0/16**.
+
+1. Delete the default subnet
+
+1. Click **+ Add a subnet**
 
 1. In the Add subnet pane, use the information in the following table to create the subnet:
 
-   | **Setting**                  | **Value**     |
-   | ---------------------------- | ------------- |
-   | Gateway Subnet name          | GatewaySubnet |
-   | Gateway Subnet address space | 10.20.0.0/27  |
+   | **Setting**                  | **Value**               |
+   | ---------------------------- | ----------------------- |
+   | Subnet purpose               | Virtual Network Gateway |
+   | Gateway Subnet address space | 10.20.0.0/27            |
 
-1. And then select **Add**. 
+Note that the subnet name will be automatically populated.
+
+1. And then select **Add**.
 
 1. On the Create virtual network page, select **Review + Create**.
 
-   ![Azure portal - add gateway subnet](../media/add-gateway-subnet.png)
-
 1. Confirm that the VNet passes the validation and then select **Create**.
-
-> [!Note]  
->
-> If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
+ to submit your deployment.
 
 ## Task 2: Create the virtual network gateway
 
@@ -133,14 +89,14 @@ In this exercise, you will:
    | Resource Group            | ContosoResourceGroup       |
    | **Instance details**      |                            |
    | Name                      | CoreServicesVnetGateway    |
-   | Region                    | East US                    |
+   | Region                    | North Europe                    |
    | Gateway type              | ExpressRoute               |
    | SKU                       | Standard                   |
    | Virtual network           | CoreServicesVNet           |
    | **Public IP address**     |                            |
    | Public IP address         | Create new                 |
    | Public IP address name    | CoreServicesVnetGateway-IP |
-   | Public IP address SKU     | Basic                      |
+   | Public IP address SKU     | Standard                     |
    | Assignment                | Not configurable           |
    
 1. Select **Review + Create**.
