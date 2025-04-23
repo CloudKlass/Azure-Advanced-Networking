@@ -128,7 +128,7 @@ In this exercise, you will:
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. 1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**.
+1. 1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory from the source folder **C:\Allfiles\M02**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 

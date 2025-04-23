@@ -4,10 +4,11 @@ lab:
     module: 'Module 04 - Load balancing non-HTTP(S) traffic in Azure'
 ---
 
-
 # M04-Unit 4 Create and configure an Azure load balancer
 
 In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. 
+
+   >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 #### Estimated time: 45 minutes (includes time to create bastion host)
 
@@ -84,12 +85,11 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files ***azuredeploy.json***, ***azuredeploy.parameters.vm1.json***, ***azuredeploy.parameters.vm2.json*** and ***azuredeploy.parameters.vm3.json*** into the Cloud Shell home directory **one by one**.
+1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload**, and upload the following files  ***azuredeploy.json***, ***azuredeploy.parameters.json*** into the Cloud Shell home directory from the source folder **C:\Allfiles\M04**..
 
-3. Deploy the following ARM templates to create the VMs needed for this exercise:
+1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
->**Important Note:** 
-When prompted for the User Password: For Example Use: **Pa55w.rd1234** and add your initials to the end to make it unique. (i.e: ***Pa55w.rd1234AB***) If you use any other complex password, make sure that you take note of it, it will be required in later steps,
+   >**Note**: You will be prompted to provide an Admin password.  Use **Pa55w.rd1234abc**
 
    ```powershell
    $RGName = "IntLB-RG"
