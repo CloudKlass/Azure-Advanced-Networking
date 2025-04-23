@@ -48,14 +48,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. Click **Next**.
 
-1. On the Create virtual networks blade, on the **Security** tab select the  **Enable Azure Bastion** tickbox, then enter the information from the table below.
-
-    | **Setting**                       | **Value**                                     |
-    | --------------------------------- | --------------------------------------------- |
-    | Azure Bastion host name                      | **IntLB-Vnet-Bastion**                             |
-    | Azure Bastion Public IP address                 | Accept the default name and click **OK**  |
-
-1. Click **Next**.
+1. On the Create virtual networks blade, on the **Security** tab Click **Next**.
 
 1. On the Create virtual networks blade, on the **IP addresses** tab: In the **existing Address space section**,
    under **Subnets**, select the **default** link.
@@ -72,7 +65,7 @@ In this section, you will create a virtual network and a subnet.
     | --- | --- |
     | Subnet template | **Default** |
     | Name | **MyFrontendSubnet**
-    | Starting address | **10.0.2.0** |
+    | Starting address | **10.0.1.0** |
     | Subnet size | **/24 (32 addresses)** |
 
 1. Click **Add**
