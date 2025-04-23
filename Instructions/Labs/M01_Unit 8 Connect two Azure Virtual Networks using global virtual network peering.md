@@ -8,6 +8,9 @@ lab:
 ## Exercise scenario 
 In this unit, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow. 
 
+![Diagram of virtual network peering.](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
+
+
 In this unit, you will:
 
 + Task 1: Create a Virtual Machine to test the configuration
@@ -16,6 +19,10 @@ In this unit, you will:
 + Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 + Task 5: Test the connection between the VMs
 + Task 6: Clean up resources
+
+
+  >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
 
 #### Estimated time: 20 minutes
 
@@ -27,9 +34,12 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M01**.
+1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory from the source folder **C:\Allfiles\Exercises\M01**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+   >**Note**: You will be prompted to provide an Admin password.  Use **Pa55w.rd1234abc**
+
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -47,25 +57,25 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Select **ManufacturingVM**.
 
-1. On **ManufacturingVM**, select **Connect &gt; RDP**.
+1. On **ManufacturingVM**, select **Connect &gt; Connect**.
 
 1. On **ManufacturingVM** | Connect, select **Download RDP file**.
 
 1. Save the RDP file to your desktop.
 
-1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password **TestPa$$w0rd!**.
+1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
 1. Select **TestVM1**.
 
-1. On **TestVM1**, select **Connect &gt; RDP**.
+1. On **TestVM1**, select **Connect &gt; Connect**.
 
 1. On **TestVM1 | Connect**, select **Download RDP file**.
 
 1. Save the RDP file to your desktop.
 
-1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password **TestPa$$w0rd!**.
+1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
 1. On both VMs, in **Networks**, select **Yes**.
 
@@ -100,31 +110,34 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On CoreServicesVnet | Peerings, select **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
+Use this information to create the peering. When finished, select **Add**. 
 
-    | Setting | Value|
-    | --- | --- |
-    | **This virtual network**| 
-    | Peering link name | **CoreServicesVnet-to-ManufacturingVnet** |
-    | Allow 'CoreServicesVnet' to access the peered virtual network | **Allow (default)** |
-    | Allow 'CoreServicesVnet' to receive forwarded traffic from the peered virtual network | **Allow** |
-    | Allow gateway in 'CoreServicesVnet' to forward traffic to the peered virtual network |  **De-Selected** |
-    | Enable 'CoreServicesVnet' to use the peered virtual networks' remote gateway | **De-Selected** |
-    | **Remote virtual network** |
-    | Peering link name | **ManufacturingVnet_to_CoreServicesVnet** |
-    | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | **De-Selected** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **ManufacturingVnet** |
-    | Allow the peered virtual network to access 'CoreServicesVnet' | **Allow (default)** |
-    | Allow the peered virtual network to receive forwarded traffic from 'CoreServicesVnet' | **Allow** |
-    | Allow gateway in the peered virtual network to forward traffic to 'CoreServicesVnet'|  **De-Selected** |
-    | Enable the peered virtual network to use 'CoreServicesVnet' remote gateway | **De-Selected** |
+**Remote virtual network summary**
 
+| **Option**                                    | **Value**                             |
+| ------------------------------------ | --------------------------------------------- | 
+| Peering link name    | `ManufacturingVnet-to-CoreServicesVnet` |
+| Virtual network | ManufacturingVnet |
 
+   **Remote virtual network peering settings**
+   
+| **Option**                                    | **Value**                             |
+| ------------------------------------ | --------------------------------------------- | 
+| Allow 'ManufacturingVnet' to access 'CoreServicesVnet' | Enabled |
+|'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet' | Enabled |
+ 
+   **Local virtual network summary**
 
-    >**Note**: This step establishes two global peerings - one from CoreServicesVnet to ManufacturingVnet and the other from ManufacturingVnet to CoreServicesVnet.
->**Note**: If you don't have a "MOC Subscription", use the subscription you've been using previously. It's just a name.
+| **Option**                                    | **Value**                             |
+| ------------------------------------ | --------------------------------------------- | 
+| Peering link name | `CoreServicesVnet-to-ManufacturingVnet` |
+ 
+**Remote virtual network peering settings**
+   
+| **Option**                                    | **Value**                             |
+| ------------------------------------ | --------------------------------------------- | 
+| Allow 'CoreServicesVnet' to access 'ManufacturingVnet' | Enabled
+| Allow 'CoreServicesVnet' to receive forwarded traffic from 'ManufacturingVnet' | Enabled |
 
 1. In **CoreServicesVnet | Peerings**, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed and **Peering status** says **Connected**..
 
