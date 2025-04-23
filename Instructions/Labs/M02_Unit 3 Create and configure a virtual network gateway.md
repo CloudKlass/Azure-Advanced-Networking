@@ -101,7 +101,7 @@ In this exercise, you will:
    
    > **Note:**
    >
-   > It can take up to 45 minutes to create a virtual network gateway. 
+   >When the '**Deployment is in progress**' Go straight to the **next task: Task 4** It can take up to 45 minutes to create a virtual network gateway. 
 
 
 ## Task 4: Create CoreServicesVM
@@ -200,15 +200,16 @@ In this exercise, you will:
 
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
+   > **Note:**
+   >
+   >  **You will not be able to complete this configuration until the virtual network gateways are fully deployed.**
+
+
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
 1. In Virtual network gateways, select **CoreServicesVnetGateway**.
 
 1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
-
-   > **Note:**
-   >
-   >  You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
 1. Use the information in the following table to create the connection:
 
