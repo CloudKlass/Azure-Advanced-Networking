@@ -102,17 +102,17 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 ## Task 3: Create the load balancer
 
-In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
+In this section, you will create an internal Standard SKU load balancer.
 
 1. On the Azure portal home page, select **Create a resource**.
 
-1. On the search box at the top of the page, type **Load**, then select **Load Balancers** from the ***Services list***.
+2. On the search box at the top of the page, type **Load**, then select **Load Balancers** from the ***Services list***.
 
-1. In the ***Load Balancing*** Blade, make sure that ***Load Balancer*** is selected.
+3. In the ***Load Balancing*** Blade, make sure that ***Load Balancer*** is selected.
 
-1. Select **+ Create**.
+4. Select **+ Create**.
 
-1. On the **Basics** tab, use the information in the table below to create the load balancer.
+5. On the **Basics** tab, use the information in the table below to create the load balancer.
 
    | **Setting**           | **Value**                |
    | --------------------- | ------------------------ |
@@ -124,11 +124,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Type                  | **Internal**             |
    | Tier                  | **Regional**             |
    
-1. Select **Next: Frontend IP configurations**.
+6. Select **Next: Frontend IP configurations**.
 
-1. Select **+ Add a frontend IP configuration**
+7. Select **+ Add a frontend IP configuration**
 
-1. On the **Add frontend IP address** blade, enter the information from the table below.
+8. On the **Add frontend IP address** blade, enter the information from the table below.
  
    | **Setting**     | **Value**                |
    | --------------- | ------------------------ |
@@ -138,13 +138,13 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Assignment      | **Dynamic**              |
    | Availability zone | **No Zone**             |  
 
-1. Click **Add**
+9. Click **Save**
 
-1. Select **Next : Backend pools**.
+10. Select **Next : Backend pools**.
 
-1. Select **+ Add a backend pool**
+11. Select **+ Add a backend pool**
  
-1. On the **Add backend pool** blade, enter the information from the table below.
+12. On the **Add backend pool** blade, enter the information from the table below.
 
    | **Setting**     | **Value**            |
    | --------------- | -------------------- |
@@ -186,12 +186,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Name                | **myHealthProbe** |
    | Protocol            | **TCP**          |
    | Port                | **80**            |
-   | Path                | **/**             |
    | Interval            | **5**            |
 
-1. Select **OK**
+1. Select **Save**
 
-1. Back on the **Add load balancing rule** blade: click **Add**
+1. Back on the **Add load balancing rule** blade: click **Save**
 
 1. Back on the **Create load balancer** blade: click **Review + create**
 
@@ -222,8 +221,8 @@ In this section, you will create a test VM, and then test the load balancer.
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
-   | Password             | **Pa55w.rd1234??** Where (??) is your initails to make the password Unique                         |
-   | Confirm password     | **Pa55w.rd1234??**   |
+   | Password             | **Pa55w.rd1234abc**   |
+   | Confirm password     | **Pa55w.rd1234abc** |
 
 
 1. Select **Next : Disks**, then select **Next : Networking**. 
@@ -234,9 +233,9 @@ In this section, you will create a test VM, and then test the load balancer.
    | ------------------------------------------------------------ | ----------------------------- |
    | Virtual network                                              | **IntLB-VNet**                |
    | Subnet                                                       | **myBackendSubnet**           |
-   | Public IP                                                    | Change to **None**            |
-
-
+   
+   >Leave all other settings as default.
+   |
 1. Select **Review + create**.
 
 1. Select **Create**.
@@ -249,17 +248,19 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. Note: you may need to select **See more** in order to see the **Private IP address** field.
 
-1. Select **Home**, then on the Azure portal home page, select **All resources**, then select on the **myTestVM** virtual machine that you just created.
+16. On the Azure Portal home page, select **Virtual Machines**.
 
-1. On the **Overview** page, select **Connect**, then **Bastion**.
+7. Select **MyTestVM**.
 
-1. Select **Use Bastion**.
+8. On MyTestVM, select **Connect &gt; Connect**.
 
-1. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then select **Connect**. If popup blocker is preventing the new window, allow popup blocker and **Connect** again.
+9. On MyTestVM | Connect, select **Download RDP file**.
 
-1. The **myTestVM** window will open in another browser tab.
+10. Save the RDP file to your desktop.
 
-1. If a **Networks** pane appears, select **Yes**.
+11. Connect to **MyTestVM** using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
+
+12. If prompted, in **Networks**, select **Yes**.
 
 1. Select the **Internet Explorer** icon in the task bar to open the web browser.
 
