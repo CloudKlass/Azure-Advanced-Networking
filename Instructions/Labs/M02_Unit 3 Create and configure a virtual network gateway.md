@@ -58,7 +58,6 @@ In this exercise, you will:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
    |                 |                   | Region                                      | East US                      |
    |                 |                   | Gateway type                                | VPN                          |
@@ -66,7 +65,6 @@ In this exercise, you will:
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | CoreServicesVnet             |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
-   |                 |                   | Public IP address type                      | Standard (default)                        |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | CoreServicesVnetGateway-ip   |
    |                 |                   | Enable active-active mode                   | Disabled                     |
@@ -75,7 +73,7 @@ In this exercise, you will:
 
    > **Note:** 
    > 
-   >It can take up to 45 minutes to create a virtual network gateway. 
+   >When the '**Deployment is in progress**' Go straight to the **next task: Task 3** It can take up to 45 minutes to create a virtual network gateway. 
 
 ## Task 3: Create ManufacturingVnet Gateway
 
@@ -88,7 +86,6 @@ In this exercise, you will:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Region                                      | North Europe                  |
    |                 |                   | Gateway type                                | VPN                          |
@@ -96,7 +93,6 @@ In this exercise, you will:
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | ManufacturingVnet            |
    |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
-   |                 |                   | Public IP Address Type                      | Standard (default)                        |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
    |                 |                   | Enable active-active mode                   | Disabled                     |
