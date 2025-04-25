@@ -98,7 +98,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Leave all other settings at default setting.
 
-1. Select **Review + create".
+1. Select **Review + create**.
 
 1. Wait for validation to complete.
 
