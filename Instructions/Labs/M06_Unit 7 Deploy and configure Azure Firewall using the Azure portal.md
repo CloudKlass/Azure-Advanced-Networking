@@ -8,6 +8,9 @@ lab:
 
 Being part of the Network Security team at Contoso, your next task is to create firewall rules to allow/deny access to certain websites. The following steps walk you through creating a resource group, a virtual network and subnets, and a virtual machine as environment preparation tasks, and then deploying a firewall and firewall policy, configuring default routes and application, network and DNAT rules, and finally testing the firewall.
 
+![Diagram of virtual network with Azure Firewall architecture.](../media/7-exercise-deploy-configure-azure-firewall-using-azure-portal.png)
+
+
 In this exercise, you will:
 
 + Task 1: Create a resource group
@@ -108,16 +111,19 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M06**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\Allfiles\M06**.
 
 1. Deploy the following ARM templates to create the VM needed for this exercise:
+
+   >**Note**: You will be prompted to provide an Admin password.
+
 
    ```powershell
    $RGName = "Test-FW-RG"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
-1. When prompted for the ***adminPassword*** Enter **Pa55w.rd1234??** (where ?? are your initials).
+1. When prompted for the ***adminPassword*** Enter **Pa55w.rd1234abc**
 
 1. When the deployment is complete, Close **Cloud Shell**
 
@@ -283,7 +289,7 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. Select **Add**.
 
- > Wait for Update to complete before doing next step.
+ > Wait for Update to complete before doing next step. (***This can take a few minutes***)
 
 ## Task 7: Configure a network rule
 
@@ -316,7 +322,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 1. Select **Add**.
 
- > Wait for Update to complete before doing next step.
+ > Wait for Update to complete before doing next step. (***This can take a few minutes***)
  
 
 ## Task 8: Configure a Destination NAT (DNAT) rule
@@ -341,7 +347,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Source                | *                                                            |
    | Protocol              | **TCP**                                                      |
    | Destination Ports     | **3389**                                                     |
-   | Destination Type      | **IP Address**                                               |
+   | Translated Type      | **IP Address**                                               |
    | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
    | Translated address    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
    | Translated port       | **3389**                                                     |
@@ -351,7 +357,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. Select **Add**.
 
- > Wait for Update to complete before doing next step.
+ > Wait for Update to complete before doing next step. (***This can take a few minutes***)
  
 
 ## Task 9: Change the primary and secondary DNS address for the server's network interface
@@ -397,17 +403,13 @@ In this final task, you will test the firewall to verify that the rules are conf
 
    ![RDP connection to firewall's public IP address](../media/remote-desktop-connection-1.png)
 
-1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, by using the password, **TestPa$$w0rd!**.
+1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, by using the password, **Pa55w.rd1234abc**.
 
 1. Select **OK**.
 
 1. Select **Yes** on the certificate message.
 
-1. Open Internet Explorer and browse to **https://www.google.com**.
-
-1. On the **Security Alert** dialog box, select **OK**.
-
-1. Select **Close** on the Internet Explorer security alerts that may pop-up.
+1. Open The **Microsoft Edge** browser and browse to **https://www.google.com**.
 
 1. You should see the Google home page.
 
