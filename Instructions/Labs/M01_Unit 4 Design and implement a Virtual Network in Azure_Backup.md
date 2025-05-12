@@ -22,14 +22,32 @@ The **ManufacturingVnet** virtual network is deployed in the **West Europe** reg
 
 The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
 
-You will create the following resources:
-
 ![Network layout for Contoso. 
 On-premises 10.10.0.0/16
 ResearchVNet Southeast Asia 10.40.40.0/24
 CoreServicesVNet East US 10.20.0.0/16
 ManufacturingVNet West Europe 10.30.0.0/16
 ](../media/design-implement-vnet-peering.png)
+
+
+You will create the following resources:
+ 
+
+| **Virtual Network** | **Region**   | **Virtual network address space** | **Subnet**                | **Subnet**    |
+| ------------------- | ------------ | --------------------------------- | ------------------------- | ------------- |
+| CoreServicesVnet    | East US      | 10.20.0.0/16                      |                           |               |
+|                     |              |                                   | GatewaySubnet             | 10.20.0.0/27  |
+|                     |              |                                   | SharedServicesSubnet      | 10.20.10.0/24 |
+|                     |              |                                   | DatabaseSubnet            | 10.20.20.0/24 |
+|                     |              |                                   | PublicWebServiceSubnet    | 10.20.30.0/24 |
+| ManufacturingVnet   | West Europe  | 10.30.0.0/16                      |                           |               |
+|                     |              |                                   | ManufacturingSystemSubnet | 10.30.10.0/24 |
+|                     |              |                                   | SensorSubnet1             | 10.30.20.0/24 |
+|                     |              |                                   | SensorSubnet2             | 10.30.21.0/24 |
+|                     |              |                                   | SensorSubnet3             | 10.30.22.0/24 |
+| ResearchVnet        |Southeast Asia| 10.40.0.0/16                      |                           |               |
+|                     |              |                                   | ResearchSystemSubnet      | 10.40.0.0/24  |
+
 
 These virtual networks and subnets are structured in a way that accommodates existing resources yet allows for projected growth. Let's create these virtual networks and subnets to lay the foundation for our networking infrastructure.
 
