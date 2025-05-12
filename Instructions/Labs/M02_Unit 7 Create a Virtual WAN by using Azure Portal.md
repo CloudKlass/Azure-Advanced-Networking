@@ -11,16 +11,37 @@ In this exercise, you will create a Virtual WAN for Contoso.
 
 In this exercise, you will:
 
-+ Task 1: Create a Virtual WAN
-+ Task 2: Create a hub by using Azure Portal
-+ Task 3: Connect a VNet to the Virtual Hub
-+ Task 4: Clean up resources
++ Task 1: Create CoreServicesVnet and ManufacturingVnet
++ Task 2: Create a Virtual WAN
++ Task 33: Create a hub by using Azure Portal
++ Task 4: Connect a VNet to the Virtual Hub
++ Task 5: Clean up resources
 
    >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 65 minutes (including ~45 minutes deployment waiting time)
+#### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
 
-## Task 1: Create a Virtual WAN
+## Task 1: Create CoreServicesVnet and ManufacturingVnet (If required)
+
+> **Note:** If you did the previous lab the Networks will already exist.  You can go to Task 2
+   
+1. In the Azure portal, select the Cloud Shell icon (top right). If necessary, configure the shell.  
+    + Select **PowerShell**.
+    + Select **No Storage Account required** and your **Subscription**, then select **Apply**.
+    + Wait for the terminal to create and a prompt to be displayed. 
+
+1. On the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory from the source folder **C:\Allfiles\Exercises\M02**
+
+1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
+
+   ```powershell
+   $RGName = "ContosoResourceGroup"
+   #create resource group if it doesnt exist
+   New-AzResourceGroup -Name $RGName -Location "eastus"
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
+   ```
+
+## Task 2: Create a Virtual WAN
 
 1. From a browser, navigate to the Azure portal and sign in with your Azure account.
 
@@ -50,7 +71,7 @@ In this exercise, you will:
 
 1. Wait for deployment to complete (this should take a couple of minutes) and select **Go to resource**.
 
-## Task 2: Create a hub by using Azure Portal
+## Task 3: Create a hub by using Azure Portal
 
 A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functionality. It takes 30 minutes to create the site-to-site VPN gateway in the virtual hub. You must create a Virtual WAN before you can create a hub.
 
@@ -80,7 +101,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 1. After 30 minutes, **Refresh** to view the hub on the Hubs page. 
 
-## Task 3: Connect a VNet to the Virtual Hub
+## Task 4: Connect a VNet to the Virtual Hub
 
 1. Locate the Virtual WAN that you created. 
 
@@ -112,7 +133,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 Congratulations! You have created a Virtual WAN and a Virtual WAN Hub and connected the ResearchVNet to the hub.
 
-## Task 4: Clean up resources
+## Task 5: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
