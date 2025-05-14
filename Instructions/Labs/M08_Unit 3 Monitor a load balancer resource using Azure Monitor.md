@@ -6,7 +6,7 @@ lab:
 
 # M08-Unit 3 Monitor a load balancer resource using Azure Monitor
 
-In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. Then you will create a Log Analytics workspace, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. 
+In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. 
 
 The diagram below illustrates the environment you will be deploying in this exercise.
 
@@ -36,15 +36,6 @@ In this section, you will create a virtual network and a subnet.
 1. On any Azure Portal page, in **Search resources, services and docs**, enter virtual network, and then select **Virtual networks** from the results.
 
 1. On the Virtual networks page, select **+Create**.
-
->**Important Note:** 
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:     
-*"Basics* | **Security** | **IP Addressess** | *Tags* | *Review + Create*". Use **Option 1 instructions**.
-
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
-*"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
-
-#### **Option 1 instructions**
 
 1. On the ***Create virtual networks*** blade, on the **Basics** tab, use the information in the following table to create the VNet:
 
@@ -78,49 +69,6 @@ In this section, you will create a virtual network and a subnet.
 
 >***Don't wait for deployment to complete. Go straight to Task 2***
 
-#### **Option 2 instructions**
-
-1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  ![Azure portal home page Global Search bar results for virtual network.](../media/global-search-bar.PNG)
-
-1. Select **Create** on the Virtual networks page.  ![Create a virtual network wizard.](../media/create-virtual-network.png)
-
-1. On the **Basics** tab, use the information in the table below to create the virtual network.
-
-   | **Setting**    | **Value**                                  |
-   | -------------- | ------------------------------------------ |
-   | Subscription   | Select your subscription                   |
-   | Resource group | Select **Create  new**  Name: **IntLB-RG** |
-   | Name           | **IntLB-VNet**                             |
-   | Region         | **(US) East US**                           |
-
-
-1. Select **Next : IP Addresses**.   
-
-1. On the **IP Addresses** tab, select **+ Add subnet**.
-
-1. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.0.0.0/24**.
-
-1. Select **Add**.
-
-1. Select **Add subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.0.2.0/24**. Select **Add**
-
-1. Select **Next : Security**.
-
-1. Under **BastionHost** select **Enable**, then enter the information from the table below.
-
-    | **Setting**                       | **Value**                                     |
-    | --------------------------------- | --------------------------------------------- |
-    | Bastion name                      | **myBastionHost**                             |
-    | AzureBastionSubnet address  space | **10.0.1.0/24**                               |
-    | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
-
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
->Wait for deployment to complete.
-
 ## Task 2: Create backend servers
 
 In this section, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
@@ -134,13 +82,9 @@ In this section, you will create three VMs, that will be in the same availabilit
    ```powershell
    $RGName = "IntLB-RG"
    
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
-   Write-Host "Deployment complete"
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
-> When prompted for the ***adminpassword*** enter **Pa55w.rd1234??** (where ?? are your initials)
-> You will be prompted for the password of each machine in turn.
+> When prompted for the ***adminpassword*** enter **Pa55w.rd1234abc**
 
 >**Note** It may take 10-15 minutes to create these three VMs.
 
