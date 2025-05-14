@@ -210,7 +210,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
-   | Password             | **Pa55w.rd1234??** (where ?? are your initials)                            |
+   | Password             | **Pa55w.rd1234abc**                            |
    | Confirm password     | **Re-Enter your password as above**                            |
 
 
