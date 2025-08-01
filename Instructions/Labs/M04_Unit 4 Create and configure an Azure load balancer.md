@@ -101,9 +101,7 @@ In this section, you will create an internal Standard SKU load balancer.
 
 2. On the search box at the top of the page, type **Load**, then select **Load Balancers** from the ***Services list***.
 
-3. In the ***Load Balancing*** Blade, make sure that ***Load Balancer*** is selected.
-
-4. Select **+ Create**.
+3. Select **Load balancers** , click **+ Create**, then **Standard Load Balancer**.
 
 5. On the **Basics** tab, use the information in the table below to create the load balancer.
 
