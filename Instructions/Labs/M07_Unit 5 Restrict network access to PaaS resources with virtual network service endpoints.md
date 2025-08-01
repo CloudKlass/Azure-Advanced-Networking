@@ -284,21 +284,21 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Under **Security + networking** for the storage account, select **Networking**.
 
-1. Select **Enabled from selected virtual networks and IP addresses**.
+1. Select **Manage** under Public network access and then select **Enable from selected networks**.
 
-1. Under **Virtual networks**, Select **+ Add existing virtual network**.
+1. Under **Virtual networks** , click **+ Add a virtual network** and **Add existing virtual network**. 
 
-1. Under **Add networks**, select the following values:
-   ![Graphical user interface, application Description automatically generated](../media/add-network-access.png)
+1. on the Add network blade select:
+  
 
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
    | Subscription     | Select your subscription.    |
    | Virtual networks | Select **CoreServicesVNet**. |
    | Subnets          | Select **Private**.          |
-
+ ![Graphical user interface, application Description automatically generated](../media/add-network-access.png)
 1. Select **Add**.
-
+ 
 1. Select **Save**.
 
 1. Under **Security and Networking** for the storage account, select **Access keys**.
