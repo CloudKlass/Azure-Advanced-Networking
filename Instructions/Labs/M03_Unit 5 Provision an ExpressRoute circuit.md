@@ -35,20 +35,14 @@ In this exercise, you will:
 
    ![Azure portal - create ExpressRoute circuit menu](../media/create-expressroute-circuit-menu.png)
 
-1. On the **Create ExpressRoute** Basics Tab, provide the following: 
+1. On the **Create ExpressRoute** Configuration Tab, provide the following: 
 
    | **Setting**          | **Value**                        |
    | -------------------- | -------------------------------- |
    | Resource Group       | ExpressRouteResourceGroup (Create New)            |
+   | Resiliency  | Standard  |
    | Location             | East US 2                         |
    | Name             | TestERCircuit                         |
-
-1. Select **Next: Configuration &gt;**.
-
-1. On the **Create ExpressRoute** Configuration Tab, provide the following: (Leave all other default settings)
-
-   | **Setting**          | **Value**                        |
-   | -------------------- | -------------------------------- |
    | Provider       | Equinix            |
    | Peering Location             | Seattle                         |
    | Bandwidth             | 50Mbps                         |
