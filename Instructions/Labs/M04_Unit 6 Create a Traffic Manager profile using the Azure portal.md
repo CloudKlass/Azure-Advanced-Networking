@@ -65,7 +65,7 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
-   | Resource group | Select **Create  new**  Name: **Contoso-RG-TM1**             |
+   | Resource group | Select  Name: **Contoso-RG-TM1**             |
    | Name           | **ContosoWebAppWestEuropexx** (where xx are your initials to make the name unique)  |
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
