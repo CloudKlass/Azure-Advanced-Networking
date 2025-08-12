@@ -216,7 +216,7 @@ In this exercise, you will:
 
 1. Under **Target**, select **BackendVM2-nic.** 
 
-   ![Azure Portal add target backends to backend pool](../media/edit-backend-pool.png)
+   ![Azure Portal add target backends to backend pool](../media/edit-backend-pool2.png)
 
 1. Select **Save**.
 
