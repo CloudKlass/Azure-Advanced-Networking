@@ -66,7 +66,7 @@ In this section, you will create a virtual network and a subnet.
     | Subnet template | **Default** |
     | Name | **MyFrontendSubnet**
     | Starting address | **10.0.1.0** |
-    | Subnet size | **/24 (32 addresses)** |
+    | Subnet size | **/24 (256 addresses)** |
 
 1. Click **Add**
 
