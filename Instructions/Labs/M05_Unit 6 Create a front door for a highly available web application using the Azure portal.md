@@ -27,11 +27,11 @@ In this exercise, you will:
 
 #### Estimated time: 30 minutes
 
-## Task 1: Create two instances of a web app
+## Task 1: Register microsoft.cdn.
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
+1. Register microsoft.cdn by running the following command:
 
    ```powershell
 
