@@ -167,9 +167,9 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. To test the failover endpoint is working properly, you need to disable the primary site.
 
-1. On the **Contoso-TMProfile** page, on the overview screen, select **myPrimaryEndpoint**.
+1. On the **Contoso-TMProfile**, under **Settings**, select **Endpoints**, and then select edit for **myPrimaryEndpoint**
 
-1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled**, and then select **Save**.
+1. On the **myPrimaryEndpoint** page, clear the tick box for **Enable Endpoint** and then select **Save**.
 
    ![Picture 25](../media/disable-primary-endpoint-1.png)
 
