@@ -96,10 +96,10 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
    | **Setting**             | **Value**                |
    | ----------------------- | ------------------------ |
-   | Name                    | **Contoso-TMProfilexx** (where xx are your initials to make the name unique) |
-   | Routing method          | **Priority**             |
    | Subscription            | Select your subscription |
    | Resource group          | **Contoso-RG-TM1**       |
+   | Name                    | **Contoso-TMProfilexx** (where xx are your initials to make the name unique) |
+   | Routing method          | **Priority**             |
    | Resource group location | **East US**              |
 
 
