@@ -171,7 +171,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **myPrimaryEndpoint** page, clear the tick box for **Enable Endpoint** and then select **Save**.
 
-   ![Picture 25](../media/disable-primary-endpoint-1.png)
+   ![Picture 25](../media/disable-primary-endpoint-2.png)
 
 1. Close the **myPrimaryEndpoint** page (select the **X** in the top right corner of the page).
 
