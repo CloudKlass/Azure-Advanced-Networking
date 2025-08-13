@@ -54,7 +54,7 @@ In this exercise, you will:
 1. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
 
 
-![Azure portal - Create ExpressRoute configuration tab](../media/expressroute-create-configuration2.png)
+![Azure portal - Create ExpressRoute configuration tab](../media/expressroute-create-configuration3.png)
 
  
 
