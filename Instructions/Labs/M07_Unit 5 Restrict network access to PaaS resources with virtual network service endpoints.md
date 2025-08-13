@@ -296,6 +296,9 @@ By default, storage accounts accept network connections from clients in any netw
    | Subscription     | Select your subscription.    |
    | Virtual networks | Select **CoreServicesVNet**. |
    | Subnets          | Select **Private**.          |
+   
+
+   
  ![Graphical user interface, application Description automatically generated](../media/add-network-access.png)
 1. Select **Add**.
  
