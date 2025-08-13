@@ -33,7 +33,7 @@ In this exercise, you will:
 
 1. On the Azure portal search area type **Express**, , and then select **ExpressRoute Curcuits*, as shown in the following image. 
 
-   ![Azure portal - create ExpressRoute circuit menu](../media/create-expressroute-circuit-menu2.png)
+   ![Azure portal - create ExpressRoute circuit menu](../media/create-expressroute-circuit-menu3.png)
 
 1. On the **Create ExpressRoute** Configuration Tab, provide the following: 
 
