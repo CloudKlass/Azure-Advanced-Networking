@@ -154,7 +154,7 @@ In this exercise, you will:
 
 1. On **ManufacturingVM**, select **Connect &gt; Connect**.
 
-1. On **ManufacturingVM | Connect**, select **Download RDP file**.
+1. On **ManufacturingVM \| Connect**, select **Download RDP file**.
 
 1. Save the RDP file to your desktop.
 
@@ -166,7 +166,7 @@ In this exercise, you will:
 
 1. On **CoreServicesVM**, select **Connect &gt; Connect**.
 
-1. On **CoreServicesVM | Connect**, select **Download RDP file**.
+1. On **CoreServicesVM \| Connect**, select **Download RDP file**.
 
 1. Save the RDP file to your desktop.
 
