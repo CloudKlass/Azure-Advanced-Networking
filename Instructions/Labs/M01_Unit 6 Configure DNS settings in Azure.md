@@ -67,7 +67,7 @@ Select **Review + create** Wait for validation to complete: Review your settings
 
 >Note: You do not need to wait for completion, carry on with the next step.
 
-4. On Contoso.com | Virtual network links, select **+ Add**. 
+4. On Contoso.com \| Virtual network links, select **+ Add**. 
 
 | **Option**                          | **Value**                                |
 | ----------------------------------- | ---------------------------------------- |
@@ -79,7 +79,7 @@ Select **Review + create** Wait for validation to complete: Review your settings
 
 
 
-5. On Contoso.com | Virtual network links, select **+ Add**. 
+5. On Contoso.com \| Virtual network links, select **+ Add**. 
 
 | **Option**                          | **Value**                           |
 | ----------------------------------- | ----------------------------------- |
