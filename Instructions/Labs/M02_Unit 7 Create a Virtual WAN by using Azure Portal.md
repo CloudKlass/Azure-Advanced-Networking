@@ -109,7 +109,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
    ![Virtual WAN configuration page with Virtual network connections highlighted.](../media/connect-vnet-to-virtual-hub.png)
 
-1. On ContosoVirtualWAN | Virtual network connections, select **+ Add connection**.
+1. On ContosoVirtualWAN \| Virtual network connections, select **+ Add connection**.
 
 1. In Add connection, use the following information to create the connection.
 
