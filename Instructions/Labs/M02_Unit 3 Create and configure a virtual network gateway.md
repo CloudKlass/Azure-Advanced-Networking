@@ -197,7 +197,7 @@ In this exercise, you will:
    ![Test-NetConnection failed.](../media/test-netconnection-fail.png)
 
 
-## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
+## Task 8: Connect CoreServicesVnet and ManufacturingVnet together.
 
    > **Note:**
    >
@@ -242,33 +242,8 @@ In this exercise, you will:
 1. To create the connection, select **Review and Create** and then **Create**.
    
 
-## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
-1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
-
-1. In Virtual network gateways, select **ManufacturingVnetGateway**.
-
-1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
-
-1. Use the information in the following table to create the connection:
-
-   | **Option**                     | **Value**                         |
-   | ------------------------------ | --------------------------------- |
-   | Name                           | ManufacturingGW-to-CoreServicesGW |
-   | Connection type                | VNet-to-VNet                      |
-   | Location                       | North Europe                      |
-   | First virtual network gateway  | ManufacturingVnetGateway          |
-   | Second virtual network gateway | CoreServicesVnetGateway           |
-   | Shared key (PSK)               | abc123                            |
-   | Use Azure Private IP Address   | Not selected                      |
-   | Enable BGP                     | Not selected                      |
-   | IKE Protocol                   | IKEv2                             |
-   | Subscription                   | No changes required               |
-   | Resource group                 | No changes required               |
-
-1. To create the connection, select **OK**.
-
-## Task 10: Verify that the connections connect 
+## Task 9: Verify that the connections connect 
 
 1. In **Search resources, services, and docs (G+/)**, enter **connections**, and then select **connections** from the results.
 
@@ -280,7 +255,7 @@ In this exercise, you will:
 
  
 
-## Task 11: Test the connection between the VMs
+## Task 10: Test the connection between the VMs
 
 1. On the **ManufacturingVM**, open PowerShell.
 
