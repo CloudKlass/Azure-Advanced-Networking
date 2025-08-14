@@ -156,7 +156,7 @@ In this exercise, you will:
 
 1. On **ManufacturingVM \| Connect**, select **Download RDP file**.
 
-1. Save the RDP file to your desktop.
+1. Select keep if prompted.
 
 1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**. After connecting, minimize the RDP session.
 
@@ -168,7 +168,7 @@ In this exercise, you will:
 
 1. On **CoreServicesVM \| Connect**, select **Download RDP file**.
 
-1. Save the RDP file to your desktop.
+1. Select keep if prompted.
 
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
