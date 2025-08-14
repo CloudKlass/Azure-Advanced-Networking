@@ -19,9 +19,8 @@ In this exercise, you will:
 + Task 6: Connect to the Test VMs using RDP
 + Task 7: Test the connection between the VMs
 + Task 8: CoreServicesVnet to ManufacturingVnet 
-+ Task 9: Connect ManufacturingVnet to CoreServicesVnet
-+ Task 10: Verify that the connections connect 
-+ Task 11: Test the connection between the VMs
++ Task 9: Verify that the connections connect 
++ Task 10: Test the connection between the VMs
 
 >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -215,19 +214,26 @@ In this exercise, you will:
 
    | **Option**                     | **Value**                         |
    | ------------------------------ | --------------------------------- |
-   | Name                           | CoreServicesGW-to-ManufacturingGW |
+   | Subscription                   | Your subscription                 |
    | Connection type                | VNet-to-VNet                      |
+   | Establish bidirectional connectivity | Enable
+   | Name                           | CoreServicesGW-to-ManufacturingGW |
    | Location                       | East US                           |
+
+1. Select next, on the setting tabs use the following values:
+
+   | **Option**    | **Value**    |
+   |--------------------------------|-----------------------------------|
    | First virtual network gateway  | CoreServicesVnetGateway           |
    | Second virtual network gateway | ManufacturingVnetGateway          |
    | Shared key (PSK)               | abc123                            |
+    | IKE Protocol                   | IKEv2                             |
    | Use Azure Private IP Address   | Not selected                      |
    | Enable BGP                     | Not selected                      |
-   | IKE Protocol                   | IKEv2                             |
    | Subscription                   | No changes required               |
    | Resource group                 | No changes required               |
 
-1. To create the connection, select **OK**.
+1. To create the connection, select **Review and Create** and then **Create**.
    
 
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
