@@ -52,7 +52,7 @@ Select **Review + create** Wait for validation to complete: Review your settings
 2. On Contoso.com \| Virtual network links, select **+ Add**.
 
 
-![contoso.com | Virtual links with + Add highlighted.](../media/add-network-link-dns2.png)
+![contoso.com \| Virtual links with + Add highlighted.](../media/add-network-link-dns2.png)
 
 3. Use the information in the following table to add the virtual network link.
 
