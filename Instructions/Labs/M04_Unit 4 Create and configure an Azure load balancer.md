@@ -97,9 +97,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 In this section, you will create an internal Standard SKU load balancer.
 
-1. On the Azure portal home page, select **Create a resource**.
-
-2. On the search box at the top of the page, type **Load**, then select **Load Balancers** from the ***Services list***.
+1. On the Azure home page, in the search bar, enter **Load**, and then select **Load balancers**.
 
 3. Select **Load balancers** , click **+ Create**, then **Standard Load Balancer**.
 
@@ -226,7 +224,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subnet                                                       | **myBackendSubnet**           |
    
    >Leave all other settings as default.
-   |
+   
 1. Select **Review + create**.
 
 1. Select **Create**.
@@ -237,7 +235,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
-1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. Note: you may need to select **See more** in order to see the **Private IP address** field.
+1. Under Settings select **Frontend IP configuration** make a note of the **Private IP address**, or copy it to the clipboard.
 
 16. On the Azure Portal home page, select **Virtual Machines**.
 
@@ -245,9 +243,9 @@ In this section, you will create a test VM, and then test the load balancer.
 
 8. On MyTestVM, select **Connect &gt; Connect**.
 
-9. On MyTestVM | Connect, select **Download RDP file**.
+9. On MyTestVM \| Connect, select **Download RDP file**.
 
-10. Save the RDP file to your desktop.
+10. Select keep if prompted.
 
 11. Connect to **MyTestVM** using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
