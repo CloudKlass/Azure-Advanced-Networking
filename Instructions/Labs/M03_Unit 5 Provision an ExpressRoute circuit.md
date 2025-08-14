@@ -31,7 +31,7 @@ In this exercise, you will:
    >
    > Your ExpressRoute circuit is billed from the moment a service key is issued. Ensure that you perform this operation when the connectivity provider is ready to provision the circuit.
 
-1. On the Azure portal search area type **Express**, , and then select **ExpressRoute Curcuits*, as shown in the following image. 
+1. On the Azure portal search area type **Express**, , and then select **ExpressRoute Curcuits**, as shown in the following image. 
 
    ![Azure portal - create ExpressRoute circuit menu](../media/create-expressroute-circuit-menu3.png)
 
