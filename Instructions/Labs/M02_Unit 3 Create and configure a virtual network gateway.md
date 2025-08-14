@@ -205,10 +205,16 @@ In this exercise, you will:
 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
+   
+1. Under **Hybrid Connectivity** \| **ExpressRoute gateways**
 
+1. Select VPN gateways from the **VPN gateway** section.
+   
 1. In Virtual network gateways, select **CoreServicesVnetGateway**.
 
-1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
+1. In the setting section select connections
+
+1. Select **+ Add**.
 
 1. Use the information in the following table to create the connection:
 
