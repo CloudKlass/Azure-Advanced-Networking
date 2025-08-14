@@ -59,9 +59,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On **ManufacturingVM**, select **Connect &gt; Connect**.
 
-1. On **ManufacturingVM** | Connect, select **Download RDP file**.
+1. On **ManufacturingVM** \| Connect, select **Download RDP file**.
 
-1. Save the RDP file to your desktop.
+1. Select keep if prompted.
 
 1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
@@ -71,9 +71,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On **TestVM1**, select **Connect &gt; Connect**.
 
-1. On **TestVM1 | Connect**, select **Download RDP file**.
+1. On **TestVM1 \| Connect**, select **Download RDP file**.
 
-1. Save the RDP file to your desktop.
+1. Select keep if prompted.
 
 1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
@@ -108,7 +108,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
    ![screen shot of core services VNet Peering settings ](../media/create-peering-on-coreservicesvnet.png)
 
-1. On CoreServicesVnet | Peerings, select **+ Add**.
+1. On CoreServicesVnet \| Peerings, select **+ Add**.
 
 Use this information to create the peering. When finished, select **Add**. 
 
@@ -124,7 +124,7 @@ Use this information to create the peering. When finished, select **Add**.
 | **Option**                                    | **Value**                             |
 | ------------------------------------ | --------------------------------------------- | 
 | Allow 'ManufacturingVnet' to access 'CoreServicesVnet' | Enabled |
-|'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet' | Enabled |
+|Allow 'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet' | Enabled |
  
    **Local virtual network summary**
 
@@ -139,13 +139,13 @@ Use this information to create the peering. When finished, select **Add**.
 | Allow 'CoreServicesVnet' to access 'ManufacturingVnet' | Enabled
 | Allow 'CoreServicesVnet' to receive forwarded traffic from 'ManufacturingVnet' | Enabled |
 
-1. In **CoreServicesVnet | Peerings**, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed and **Peering status** says **Connected**..
+1. In **CoreServicesVnet \| Peerings**, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed and **Peering status** says **Connected**..
 
-   >**Note:** you may have to refresh the **CoreServicesVnet | Peerings** blade more than once.
+   >**Note:** you may have to refresh the **CoreServicesVnet \| Peerings** blade more than once.
 
 1. Under Virtual networks, select **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed and **Peering status** says **Connected**.
 
-   >**Note:** you may have to refresh the **ManufacturingVnet | Peerings** blade more than once.
+   >**Note:** you may have to refresh the **ManufacturingVnet \| Peerings** blade more than once.
 
 
 ## Task 5: Test the connection between the VMs
