@@ -222,8 +222,9 @@ In this exercise, you will:
    | ------------------------------ | --------------------------------- |
    | Subscription                   | Your subscription                 |
    | Connection type                | VNet-to-VNet                      |
-   | Establish bidirectional connectivity | Enable
-   | Name                           | CoreServicesGW-to-ManufacturingGW |
+   | Establish bidirectional connectivity | Enable                       |
+   | First connection name          | CoreServicesGW-to-ManufacturingGW |
+   | Second connection name     |   ManufacturingGW-to-CoreServicesGW  
    | Location                       | East US                           |
 
 1. Select next, on the setting tabs use the following values:
