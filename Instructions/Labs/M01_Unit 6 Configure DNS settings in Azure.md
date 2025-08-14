@@ -47,11 +47,12 @@ Select **Review + create** Wait for validation to complete: Review your settings
 
 ## Task 2: Link subnet for auto registration
 
-1. In **Contoso.com**, under **Settings**, select **Virtual network links**.
+1. In **Contoso.com**, under **DNS Management**, select **Virtual network links**.
 
 2. On Contoso.com | Virtual network links, select **+ Add**.
 
-![contoso.com | Virtual links with + Add highlighted.](../media/add-network-link-dns.png)
+
+![contoso.com | Virtual links with + Add highlighted.](../media/add-network-link-dns2.png)
 
 3. Use the information in the following table to add the virtual network link.
 
@@ -128,9 +129,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 2. On Private DNS zones, select **contoso.com**.
 
-3. Verify that host (A) records are listed for both VMs, as shown:
+3. Verify that host (A) records are listed for both VMs under **DNS Management**, **Recordsets**, as shown:
 
-![Contoso.com DNS zone showing auto-registered host A records.](../media/contoso_com-dns-zone.png)
+![Contoso.com DNS zone showing auto-registered host A records.](../media/contoso_com-dns-zone2.png)
 
  
 
@@ -148,23 +149,23 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 ![TestVM1 with Connect and RDP highlighted.](../media/connect-to-am.png)
 
-4. On TestVM1 | Connect, select **Download RDP file**.
+4. On TestVM1|Connect, select **Download RDP file**.
 
-5. Save the RDP file to your desktop.
+5. Select keep if prompted
+   
+7. On the Azure Portal home page, select **Virtual Machines**.
 
-6. On the Azure Portal home page, select **Virtual Machines**.
+8. Select **TestVM2**.
 
-7. Select **TestVM2**.
+9. On TestVM2, select **Connect &gt; Connect**.
 
-8. On TestVM2, select **Connect &gt; Connect**.
+10. On TestVM2 | Connect, select **Download RDP file**.
 
-9. On TestVM2 | Connect, select **Download RDP file**.
+11. Select keep if prompted
 
-10. Save the RDP file to your desktop.
+12. Connect to **TestVM1** using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
 
-11. Connect to **TestVM1** using the RDP file, and the username **TestUser** and the password **Pa55w.rd1234abc**.
-
-12. If prompted, in **Networks**, select **Yes**.
+13. If prompted, in **Networks**, select **Yes**.
 
 15. On **TestVM1**, open a PowerShell console and enter the command **ipconfig /all**.
 
@@ -174,7 +175,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 18. Verify that the FQDN resolves to the IP address that you noted in the Private DNS zone. The ping itself will timeout because of the Windows Firewall that is enabled on the VMs.
 
-19. Enter the command **Test-NetConnection -Computername TestVM1.Contoso.com -port 3389** and verify that you receive a successful name resolution record and **TcpTestSucceeded : True** response from **TestVM2**
+19. Enter the command **Test-NetConnection -Computername TestVM2.Contoso.com -port 3389** and verify that you receive a successful name resolution record and **TcpTestSucceeded : True** response from **TestVM2**
  
 
 Congratulations! You have created a private DNS Zone, added a name resolution and auto-registration link, and tested name resolution in your configuration. 
