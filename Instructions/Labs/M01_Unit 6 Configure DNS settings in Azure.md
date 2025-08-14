@@ -49,7 +49,7 @@ Select **Review + create** Wait for validation to complete: Review your settings
 
 1. In **Contoso.com**, under **DNS Management**, select **Virtual network links**.
 
-2. On Contoso.com | Virtual network links, select **+ Add**.
+2. On Contoso.com \| Virtual network links, select **+ Add**.
 
 
 ![contoso.com | Virtual links with + Add highlighted.](../media/add-network-link-dns2.png)
@@ -149,7 +149,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 ![TestVM1 with Connect and RDP highlighted.](../media/connect-to-am.png)
 
-4. On TestVM1|Connect, select **Download RDP file**.
+4. On TestVM1 \| Connect, select **Download RDP file**.
 
 5. Select keep if prompted
    
@@ -159,7 +159,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 9. On TestVM2, select **Connect &gt; Connect**.
 
-10. On TestVM2 | Connect, select **Download RDP file**.
+10. On TestVM2 \| Connect, select **Download RDP file**.
 
 11. Select keep if prompted
 
