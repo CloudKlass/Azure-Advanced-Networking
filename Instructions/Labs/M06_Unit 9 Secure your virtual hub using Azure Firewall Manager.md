@@ -3,7 +3,7 @@ lab:
     title: 'M06 - Unit 9 Secure your virtual hub using Azure Firewall Manager'
     module: 'Module 06 - Design and implement network security'
 ---
-
+Under Maintance
 
 # M06-Unit 9 Secure your virtual hub using Azure Firewall Manager
 
@@ -238,12 +238,9 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 In this task you will first create your firewall policy, then secure your hub. The firewall policy will define collections of rules to direct traffic on one or more Secured virtual hubs.
 
-1. From the Azure portal home page, select **Firewall Manager**.
-   - If the Firewall Manager icon does not appear on the homepage, then select **More services**. Then in the search box, type **firewall manager** and select **Firewall Manager** when it appears.
+1. In the portal search bar type **firewalls** and select **Firewall Policies** when it appears.
 
-1. From **Firewall Manager**, under the **Security** heading in the menu, select **Azure Firewall Policies**.
-
-1. Select **Create Azure Firewall Policy**.
+1. Select **+ Create**.
 
 1. On **Resource group**, select **fw-manager-rg**.
 
@@ -303,9 +300,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 1. For **Destination Ports**, enter **3389**.
 
-1. For **Destination Type**, select **IP Address**.
-
-1. For **Destination**, enter the firewall virtual hub public IP address that you noted down earlier (e.g., **51.143.226.18**).
+1. For **Destination (FirewallIP)**,enter the firewall virtual hub public IP address that you noted down earlier (e.g., **51.143.226.18**).
 
 1. For **Translated address**, enter the private IP address for **Srv-workload-01** that you noted down earlier (e.g., **10.0.1.4**).
 
@@ -351,9 +346,8 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 In this task you will associate the firewall policy with the virtual hub.
 
-1. From the Azure portal home page, select **Firewall Manager**.
-   - If the Firewall Manager icon does not appear on the homepage, then select **More services**. Then in the search box, type **firewall manager** and select **Firewall Manager** when it appears.
-
+1. From the Azure portal home page, select **Firewall Policies**.
+   
 1. On **Firewall Manager**, under **Security**, select **Azure Firewall Policies**.
 
 1. Select the checkbox for **Policy-01**.
