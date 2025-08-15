@@ -173,13 +173,13 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 16. When the deployment completes, from the Azure portal home page, select **More services**.
 
-17. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
+17. In the search box, type **firewall** and select **Firewalls** when it appears.
 
-18. On the **Firewall Manager** page, select **Virtual hubs**.
+18. On the **Network security \| Azure Firewalls** page, select **Virtual hubs**.
 
 19. Select **Hub-01**.
 
-20. Select **Public IP configuration**.
+20. Select **Public IP configuration** from the Azure Firewall section.
 
 21. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
 
