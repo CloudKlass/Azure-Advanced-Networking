@@ -114,7 +114,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 1. In the **Search resources, services, and docs** box at the top of the portal, enter **CoreServicesVNet**. When **CoreServicesVNet** appears in the search results, select it.
 
 1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture: 
-   ![Graphical user interface, application Description automatically generated](../media/create-subnet.png)
+   ![Graphical user interface, application Description automatically generated](../media/create-subnet2.png)
 
 1. Under **Add subnet**, select or enter the following information:
 
