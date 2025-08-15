@@ -124,7 +124,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
    | Address range               | **10.0.1.0/24**                  |
    | Service endpoints: Services | Select **Microsoft.Storage** |
 
-1. Select **Save**.
+1. Select **Add**.
 
 You should now have two subnets configured:
 
@@ -207,7 +207,7 @@ Create another outbound security rule that denies communication to the internet.
 
 Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffic to the subnet from anywhere. The rule overrides a default security rule that denies all inbound traffic from the internet. Remote desktop connections are allowed to the subnet so that connectivity can be tested in a later step.
 
-1. On ContosoPrivateNSG | Outbound security rules, under **Settings**, select **Inbound security rules**.
+1. On ContosoPrivateNSG \| Outbound security rules, under **Settings**, select **Inbound security rules**.
 
 1. Select **+ Add**.
 
@@ -284,7 +284,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Under **Security + networking** for the storage account, select **Networking**.
 
-1. Select **Manage** under Public network access and then select **Enable from selected networks**.
+1. Select **Manage** under Public access and then select **Enable from selected networks**.
 
 1. Under **Virtual networks** , click **+ Add a virtual network** and **Add existing virtual network**. 
 
