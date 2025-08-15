@@ -146,7 +146,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Normally you would now select **Save** to save your diagnostic settings. Note that this option is still grayed out as we cannot complete the setting configuration yet.
 
-1. Select **Discard**, then select **OK**.
+1. Select **Discard**, then select **Yes**.
 
  
 
@@ -169,7 +169,8 @@ In this step you will create a virtual machine, assign a public IP address to it
    | Virtual machine name  | **MyVirtualMachine**                                         |
    | Region                | Your region                                                  |
    | Availability options  | **No infrastructure  redundancy required**                   |
-   | Image                 | **Ubuntu Server 18.04 LTS -  Gen 1** (Select Configure VM Generation link if needed) |                     
+   | Security Type          | Stanard                                                     |
+   | Image                 | **Ubuntu Server 18.04 LTS -  Gen 1** (You may need to search the marketplace for this build) |                     
    | Size                  | Select **See  all sizes**, then choose **B1ls** in the  list and choose **Select**  **(Standard_B1ls - 1 vcpu,  0.5 GiB memory** |
    | Authentication type   | **SSH public key**                                           |
    | Username              | **azureuser**                                                |
@@ -191,9 +192,9 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 ### Assign the Public IP address
 
-1. On the **Overview** page of the new virtual machine, under **Settings**, select **Networking**.
+1. On the **Overview** page of the new virtual machine, under **Networkings**, select **Network settings**.
 
-1. Next to **Network Interface**, select **myvirtualmachine-nic**. The name of the nic may differ.
+1. Select **myvirtualmachine-nic**. The name of the nic may differ.
 
 1. Under **Settings**, select **IP configurations**.
 
@@ -203,7 +204,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Save**.
 
-   ![Change public IP address for DDoS VM](../media/change-public-ip-config-for-ddos-vm-new.png)
+   ![Change public IP address for DDoS VM](../media/change-public-ip-config-for-ddos-vm-new2.png)
 
 ### Configure DDoS alerts
 
@@ -231,15 +232,15 @@ In this step you will create a virtual machine, assign a public IP address to it
 
    ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-1.png)
 
-1. On the **Operator** box select **Greater than or equal to**.
+1. On the **VAlue is** box select **Greater than or equal to**.
 
-1. On **Threshold value**, enter **1** (means under attack).
+1. On **Threshold**, enter **1** (means under attack).
 
 1. Select **Next: Actions**: Select **Next: Details**.
 
 1. Back on the **Create alert rule** page, under the **Alert rule details** section and in **Alert rule name**, enter **MyDdosAlert**.
 
-    ![End point of create new alert rule](../media/new-alert-rule-end.png)
+    ![End point of create new alert rule](../media/new-alert-rule-end2.png)
 
 1. Select **Review + Create**.
 
