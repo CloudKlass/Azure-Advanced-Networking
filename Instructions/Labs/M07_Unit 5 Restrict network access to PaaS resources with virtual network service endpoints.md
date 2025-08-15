@@ -332,7 +332,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 ## Task 10: Confirm access to storage account
 
 1. Once the ContosoPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button, then select RDP.
-   ![Graphical user interface, application Description automatically generated](../media/private-virtual-machine-connect.png)
+   ![Graphical user interface, application Description automatically generated](../media/private-virtual-machine-connect2.png)
 
 1. After selecting the Connect button and RDP, select the Download RDP File button. A Remote Desktop Protocol (.rdp) file is created and downloaded to your computer.
 
