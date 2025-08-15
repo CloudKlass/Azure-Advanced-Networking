@@ -187,6 +187,8 @@ In this task, you will deploy the firewall into the virtual network with a firew
 3. Review all the settings to ensure they match the screenshot below.
 
    ![Create a firewall - review settings](../media/review-all-configurations-for-firewall.png)
+   
+1. Select **Tags**
 
 4. Select **Review + create**.
 
@@ -347,8 +349,8 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Source                | *                                                            |
    | Protocol              | **TCP**                                                      |
    | Destination Ports     | **3389**                                                     |
-   | Translated Type      | **IP Address**                                               |
    | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
+   | Translated Type      | **IP Address**                                               |
    | Translated address    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
    | Translated port       | **3389**                                                     |
 
