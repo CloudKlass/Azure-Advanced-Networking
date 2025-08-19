@@ -3,7 +3,7 @@ lab:
     title: 'M06 - Unit 9 Secure your virtual hub using Azure Firewall Manager'
     module: 'Module 06 - Design and implement network security'
 ---
-Under Maintance
+
 
 # M06-Unit 9 Secure your virtual hub using Azure Firewall Manager
 
@@ -348,33 +348,33 @@ In this task you will associate the firewall policy with the virtual hub.
 
 1. From the Azure portal home page, select **Firewall Policies**.
    
-1. On **Firewall Manager**, under **Security**, select **Azure Firewall Policies**.
-
-1. Select the checkbox for **Policy-01**.
-
-1. Select **Manage associations&gt;Associate hubs**.
+1. On **Network security \| Azure Firewall Policies**, under **Secure your resources**, select **Virtual Hubs**.
 
 1. Select the checkbox for **Hub-01**.
 
-1. Select **Add**.
+1. Select **Manage security** and from the drop down menu select **Choose another firewall policy**.
+
+1. Select the checkbox for **Policy-01**.
+
+1. Select **Next : Review + confirm**.
+
+1. Select **Confirm** 
 
 1. Wait for the deployment to complete.
 
-1. When the policy has been attached, select **Refresh**. The association should be displayed.
 
-![Show associated firewall policy on hub](../media/associate-firewall-policy-with-hub-end.png)
-
- 
 
 ## Task 7: Route traffic to your hub
 
 In this task you will ensure that network traffic gets routed through your firewall.
+ 
+1. From the Azure portal home page select **Firewalls**
 
-1. On **Firewall Manager**, select **Virtual hubs**.
+1. On the Network security \| Azure Firewalls page select **Virtual Hubs** from the **Secure your resources** section 
 
-1. Select **Hub-01**.
+1. Click on  **Hub-01**.
 
-1. Under **Settings**, select **Security configuration**.
+1. Select **Security configuration**.
 
 1. On **Internet traffic**, select **Azure Firewall**.
 
