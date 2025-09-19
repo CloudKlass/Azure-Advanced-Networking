@@ -212,7 +212,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 1. Select **+ Add**.
 
 1. In Add inbound security rule, enter the following values::
-   ![Graphical user interface, application Description automatically generated](../media/add-inbound-security-rule.png)
+   ![Graphical user interface, application Description automatically generated](../media/add-inbound-security-rule-2.png)
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
