@@ -121,7 +121,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
    | **Setting**                 | **Value**                    |
    | --------------------------- | ---------------------------- |
    | Name                        | **Private**                      |
-   | Address range               | **10.0.1.0/24**                  |
+   | Starting address            | **10.0.1.0/24**                  |
    | Service endpoints: Services | Select **Microsoft.Storage** |
 
 1. Select **Add**.
