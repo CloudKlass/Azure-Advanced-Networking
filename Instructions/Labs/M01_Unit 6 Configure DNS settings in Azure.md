@@ -117,7 +117,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
   
-4. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+4. When the deployment is complete, go to the Azure portal menu, and then select **Virtual Machines**.
 
 5. Verify that both virtual machines have been created.
 
