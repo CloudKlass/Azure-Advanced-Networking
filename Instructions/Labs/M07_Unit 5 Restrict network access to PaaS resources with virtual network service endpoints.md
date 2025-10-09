@@ -159,7 +159,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 1. Select **+ Add**.
 
 1. Create a rule that allows outbound communication to the Azure Storage service. Enter, or select, the following information:
-   ![Graphical user interface, application Description automatically generated](../media/add-outbound-security-rule.png)
+   ![Graphical user interface, application Description automatically generated](../media/add-outbound-security-rule1b.png)
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
