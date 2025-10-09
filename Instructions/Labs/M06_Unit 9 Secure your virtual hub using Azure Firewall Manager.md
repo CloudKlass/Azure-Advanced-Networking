@@ -134,7 +134,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. From the Azure portal home page, select **More services**.
 
-2. In the search box, type **firewall manager** and select **Network security Keywords: Firewall Manager** when it appears.
+2. In the search box, type **firewall** and select **Firewalls** when it appears.
 
 3. On the **Network Security** page, In  the **Secure your resources** section, select **Virtual Hubs**.
 
