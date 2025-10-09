@@ -150,7 +150,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 1. On the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
 
 1. In a new browser tab, navigate to the Front Door endpoint FQDN. The default App Service page will be displayed.
-   ![Browser showing App Service information page](../media/app-service-info-page.png)
+   ![Browser showing App Service information page](../media/app-service-info-page1b.png)
 
 1. To test instant global failover in action, try the following steps:
 
