@@ -46,18 +46,18 @@ In this section, you will create two instances of a web application deployed in 
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
    | Operating system | **Windows**                                                  |
-   | Region           | **East US**                                                  |
+   | Region           | **East US 2**                                                  |
    | Windows Plan     | Select **Create  new**  Name: **ContosoAppServicePlanEastUS** |
    | Pricing Plan     | **Standard S1 100 total ACU, 1.75-GB  memory**               |
 
 
-1. Select **Monitoring** tab.
+1. Select **Monitor + secure** tab.
 
-1. On the **Monitoring** tab, select the **No** option for **Enable Application Insights**.
+1. On the **Monitor + secure** tab, select the **No** option for **Enable Application Insights**.
 
 1. Select **Review + create**.
 
-   ![Picture 18](../media/create-web-app-1.png)
+   ![Picture 18](../media/create-web-app-1b.png)
 
 1. Select **Create**. When the Web App successfully deploys, it creates a default web site.
 
