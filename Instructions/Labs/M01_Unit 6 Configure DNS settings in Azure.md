@@ -24,8 +24,8 @@ In this exercise, you will:
 
 1. Go to [Azure Portal](https://portal.azure.com/).
 
-2. On the Azure home page, in the search bar, enter **dns**, and then select **Private DNS zones**.  
-   ‎![Azure Portal home page with dns search.](../media/create-private-dns-zone.png)
+2. On the Azure home page, in the search bar, enter **private dns**, and then select **Private DNS zones**.  
+   ‎![Azure Portal home page with dns search.](../media/create-private-dns-zone1.png)
 
 3. In Private DNS zones, select **+ Create**.
 
