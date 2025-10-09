@@ -80,12 +80,14 @@ In this exercise, you will:
 | IP Addresses | IPv4 address space | 10.20.0.0/16         |
 
  4. Use the information in the following table to create the CoreServicesVnet subnets.
+ 
+ 5. Delete the precreated default subnet. 
 
- 5. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
+ 6. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
 | **Subnet**             | **Subnet Template**  | **Option**           | **Value**              |
 | ---------------------- | ------------------   | -------------------- | ---------------------- |
-| GatewaySubnet          | Virtual Network Gateway |Subnet name          | GatewaySubnet (default)         |
+| GatewaySubnet          | Virtual Network Gateway |Subnet name          | GatewaySubnet         |
 |                        | |Subnet address range | 10.20.0.0/27           |
 | SharedServicesSubnet   | Default|Subnet name          | SharedServicesSubnet   |
 |                        | |Subnet address range | 10.20.10.0/24          |
