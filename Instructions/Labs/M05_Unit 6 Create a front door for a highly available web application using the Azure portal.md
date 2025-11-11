@@ -100,11 +100,11 @@ This exercise requires two instances of a web application that run in different 
 
 Configure Azure Front Door to direct user traffic based on lowest latency between the two web apps servers. To begin, add a frontend host for Azure Front Door.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, Search for Front Door and CDN profiles, and then select **Front Door and CDN profiles**.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, Search for Front Doors, and then select **Front Doors**.
 
-1. Select **Create front door and CDN profiles**. On the Compare offerings page, select **Quick create**. Then select **Continue to create a Front Door**.
+2. Select **Create front doors**. On the Compare offerings page, select **Quick create**. Then select **Continue to create a Front Door**.
 
-1. On the Basics tab, enter or select the following information.
+3. On the Basics tab, enter or select the following information.
 
 
    | **Setting**             | **Value**                                    |
