@@ -160,7 +160,9 @@ In this exercise, you will:
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select **Manage files** and then **Upload**. Upload the following files: **backend.json**, **backend.parameters.json**, and **install-iis.ps1**.The files are available for download from the repository, **C:\Allfiles\M05** folder.
+1. On the toolbar of the Cloud Shell pane, select **Manage files** and then **Upload**. Upload the following files: **`backend.json`**, **`backend.parameters.json`**, and **`install-iis.ps1`**.
+
+1. The files are available for download from the repository, **C:\Allfiles\M05** folder.
 
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
