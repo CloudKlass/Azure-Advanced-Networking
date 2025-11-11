@@ -62,7 +62,7 @@ This exercise requires two instances of a web application that run in different 
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **North Europe**.                                       |
    | Windows Plan     | Select **Create new** Name: **myAppServicePlanNorthEurope**. |
-   | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+   | Princing Plan    | Select **Premium V4 POV4 (4 GB memory, 1 vCPU)**.        |
 
 1. Select the **Monitor and Secure** tab.
 
@@ -87,7 +87,7 @@ This exercise requires two instances of a web application that run in different 
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **West Europe**.                                          |
    | Windows Plan     | Select **Create new** Name: **myAppServicePlanWestEurope**. |
-   | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+   | Pricing Plan     | Select **Premium V4 POV4 (4 GB memory, 1 vCPU)**.        |
 
 1. Select the **Monitor and Secure** tab.
 
