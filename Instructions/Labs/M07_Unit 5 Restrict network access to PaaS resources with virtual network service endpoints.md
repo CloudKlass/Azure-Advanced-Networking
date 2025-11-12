@@ -33,15 +33,6 @@ In this exercise, you will:
 
 1. Select **+ Create**.
 
->**Important Note:** 
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:     
-*"Basics* | **Security** | **IP Addressess** | *Tags* | *Review + Create*". Use **Option 1 instructions**.
-
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
-*"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
-
-#### **Option 1 instructions**
-
 1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
    | **Setting**          | **Value**                        |
@@ -72,40 +63,6 @@ In this exercise, you will:
 1. Click **Save**
 
 1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
-
-> If you used Option 1 instruction: **GO TO Task 2**
-
-#### **Option 2 instructions**
-
-1. Enter, or select, the following information:
-   ![Graphical user interface, text, application Description automatically generated](../media/create-virtual-network.png)
-
-   | **Setting**    | **Value**                                     |
-   | -------------- | --------------------------------------------- |
-   | Subscription   | Select your subscription                      |
-   | Resource group | (New) myResourceGroup                         |
-   | Name           | CoreServicesVNet                              |
-   | Location       | Select **East US**                            |
-
-1. Select the **IP Addresses** tab and enter the following values (select **default** to change the subnet name):
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-ip.png)
-
-   | **Setting**          | **Value**   |
-   | -------------------- | ----------- |
-   | Address space        | 10.0.0.0/16 |
-   | Subnet Name          | Public      |
-   | Subnet Address range | 10.0.0.0/24 |
-
-1. Select the **Security** tab and enter the following values:
-   ![Graphical user interface, text, application, email Description automatically generated](../media/ create-virtual-network-security.png)
-
-   | **Setting**             | **Value** |
-   | ----------------------- | --------- |
-   | BastionHost             | Disabled  |
-   | DDoS Network Protection | Disabled  |
-   | Firewall                | Disabled  |
-
-1. Select **Review + Create**. Once the resource is validated select **Create**. 
 
 ## Task 2: Enable a service endpoint
 
@@ -284,7 +241,9 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Under **Security + networking** for the storage account, select **Networking**.
 
-1. Select **Manage** under Public access and then select **Enable from selected networks**.
+1. Select **Manage** 
+
+1. Next to `Public network access scope` select the **Enable from selected networks** radio button**.
 
 1. Under **Virtual networks** , click **+ Add a virtual network** and **Add existing virtual network**. 
 
@@ -300,7 +259,7 @@ By default, storage accounts accept network connections from clients in any netw
 
    
  ![Graphical user interface, application Description automatically generated](../media/add-network-access.png)
-1. Select **Add**.
+1. Select **Enable** then **Add**.
  
 1. Select **Save**.
 
@@ -325,7 +284,7 @@ To test network access to a storage account, deploy a VM to each subnet.
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
-1. When prompted for the ***adminpassword*** enter **Pa55w.rd1234??** (where ?? are your initials to make the password unique).
+1. When prompted for the ***adminpassword*** enter **Pa55w.rd1234abc**.
 
 1. When the deployment is complete (the deployment can take a few minutes), Minimise **Cloud Shell** and then go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -359,7 +318,7 @@ The Azure file share successfully mapped to the Z drive.
 
 1. Confirm that the VM has no outbound connectivity to the internet from a command prompt:
 
- ping bing.com
+ **ping** bing.com
 
 
 You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
