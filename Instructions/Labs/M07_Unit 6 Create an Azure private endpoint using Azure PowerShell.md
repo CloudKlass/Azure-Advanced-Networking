@@ -227,7 +227,7 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 
 ```
-> (Note: **when prompted enter a local admin account credentials for the VM** (i.e. ***Testuser and Pa55w.rd1234??*** (where ?? are your initials))).
+> (Note: **when prompted enter a local admin account credentials for the VM** (i.e. ***Testuser*** and ***Pa55w.rd1234abc***.
 
 > Don't forget to press enter when prompted to run the last command (***New-AzVM etc.***). Then wait for the deployment to complete (Should take about 5 minutes).
 
