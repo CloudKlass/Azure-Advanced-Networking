@@ -180,4 +180,4 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 Congratulations! You have created a private DNS Zone, added a name resolution and auto-registration link, and tested name resolution in your configuration. 
 
->**Note:** Do not Delete any resources: you will use them in the next LAB Exercise.
+**Note: Do not Delete any resources: you will use them in the next LAB Exercise.**
