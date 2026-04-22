@@ -63,6 +63,8 @@ In this section, you will create a virtual network and a subnet.
 
 1. On the **Edit subnet blade**, under **Subnet details**: Change the Name to **MyBackendSubnet**. 
 
+1. Untick: Enable private subnet (no default outbound access)
+
 1. Click **Save**
 
 1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
