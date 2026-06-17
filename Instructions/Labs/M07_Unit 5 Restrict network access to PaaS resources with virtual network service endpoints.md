@@ -39,7 +39,7 @@ In this exercise, you will:
    | -------------------- | -------------------------------- |
    | Resource Group       | Create new:  Name: **myResourceGroup**            |
    | Virtual Network Name | **CoreServicesVnet**                 |
-   | Location             | **East US**                          |
+   | Location             | **SoutheastAsia**                          |
 
 1. Click **Next**.
 
@@ -105,7 +105,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | Subscription   | Select: your Subscription                                |
    | Resource group | Select: **myResourceGroup**                  |
    | Name           | **ContosoPrivate-nsg**                             |
-   | Region         | **East US**                                           |
+   | Region         | **SoutheastAsia**                                           |
 
 1. select **Review + create**, then select **Create**:
 
@@ -210,7 +210,7 @@ The steps necessary to restrict network access to resources created through Azur
    | Subscription   | Select your subscription                                     |
    | Resource group | **myResourceGroup**                                        |
    | Name           | **contosostoragexx** (where xx are your initials to make it unique) |
-   | Region         | **East US**                                               |
+   | Region         | **SoutheastAsia**                                               |
    | Performance    | **Standard** (general purpose v2)**                     |
    | Redundancy    | **Locally-redundant storage (LRS)**                             |
 
