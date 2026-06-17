@@ -35,22 +35,13 @@ In this task, you will create the two spoke virtual networks each containing a s
 1. On the Azure portal home page, in the search box, type **virtual network** and select **Virtual Network** when it appears.
 1. Select **Create**.
 
->**Important Note:** 
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:     
-*"Basics* | **Security** | **IP Addressess** | *Tags* | *Review + Create*". Use **Option 1 instructions**.
-
->>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
-*"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
-
-#### **Option 1 instructions**
-
 1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
    | **Setting**          | **Value**                        |
    | -------------------- | -------------------------------- |
    | Resource Group       | Create new: Name: **fw-manager-rg**            |
    | Virtual Network Name | **Spoke-01**                 |
-   | Region             | **East US**                          |
+   | Region             | **SoutheastAsia**                          |
 
 1. Click **Next**.
 
@@ -80,7 +71,7 @@ In this task, you will create the two spoke virtual networks each containing a s
    | -------------------- | -------------------------------- |
    | Resource Group       | Select: **fw-managers-rg**            |
    | Virtual Network Name | **Spoke-02**                 |
-   | Region             | **East US**                          |
+   | Region             | **SoutheastAsia**                          |
    | Address space | ***Edit the default address space using the following settings***. |
    |**Address space details** | |
    | Starting address | **10.1.0.0** |
@@ -91,42 +82,6 @@ In this task, you will create the two spoke virtual networks each containing a s
    | Starting address | **10.1.1.0** |
    | Subnet size | **/24 (256 addresses)**
    | **Save subnet** and then Select **Review and create**, then **Create**
-
->If you carried out **Option 1 instructions: GO TO Task 2**
-
-#### **Option 2 instructions**
-
-1. In **Resource group**, select **Create new**, and enter **fw-manager-rg** as the name and select **OK**.
-
-1. In **Name**, enter **Spoke-01**.
-
-1. In **Region**, select your region.
-
-1. Select **Next: IP Addresses**.
-
-1. In **IPv4 address space**, enter **10.0.0.0/16**. 
-
-1. **Delete** any other address spaces listed here, such as **10.1.0.0/16**.
-
-1.  Under **Subnet name**, select the word **default**.
-
-1. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**.
-
-1. Change the **Subnet address range** to **10.0.1.0/24**.
-
-1. Select **Save**.
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
-Repeat steps 1 to 14 above to create another similar virtual network and subnet but using the following information:
-
-- Resource Group: **fw-manager-rg** (select existing)
-- Name: **Spoke-02**
-- Address space: **10.1.0.0/16** - (delete any other listed address spaces)
-- Subnet name: **Workload-02-SN**
-- Subnet address range: **10.1.1.0/24**
 
 ## Task 2: Create the secured virtual hub
 
@@ -142,7 +97,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 5. For **Resource group**, select **fw-manager-rg**.
 
-6. For **Region**, select **East US**.
+6. For **Region**, select **SoutheastAsia**.
 
 7. For the **Secured virtual hub name**, enter **Hub-01**.
 
@@ -168,8 +123,6 @@ In this task you will create your secured virtual hub using Firewall Manager.
     > This can take up to 30 minutes to deploy.
 
     ​
-
-    ![Create new secured virtual hub - Review + create tab](../media/create-new-secured-virtual-hub-2.png)
 
 16. When the deployment completes, from the Azure portal home page, select **More services**.
 
@@ -225,7 +178,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
-1. When prompted for ***adminpassword*** enter **Pa55w.rd1234??** (where **??** = your initials.)
+1. When prompted for ***adminpassword*** enter **Pa55w.rd1234abc**
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
