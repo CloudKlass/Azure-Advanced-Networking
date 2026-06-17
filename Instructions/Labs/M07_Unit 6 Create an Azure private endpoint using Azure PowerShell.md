@@ -195,7 +195,7 @@ $parameters2 = @{
 
  VMName = 'myVM'
 
- VMSize = 'Standard_DS1_v2'
+ VMSize = 'Standard_D2S_v5'
 
 }
 
