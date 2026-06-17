@@ -50,7 +50,7 @@ An Azure resource group is a logical container into which Azure resources are de
 Create a resource group with [New-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroup):
 
 ```PowerShell
-New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
+New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'southeastasia'
 ```
 Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
 
@@ -94,7 +94,7 @@ $parameters1 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
- Location = 'eastus'
+ Location = 'southeastasia'
 
  AddressPrefix = '10.0.0.0/16'
 
@@ -112,7 +112,7 @@ $parameters2 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
- Location = 'eastus'
+ Location = 'southeastasia'
 
  Sku = 'Standard'
 
@@ -181,7 +181,7 @@ $parameters1 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
- Location = 'eastus'
+ Location = 'southeastasia'
 
  Subnet = $vnet.Subnets[0]
 
@@ -223,7 +223,7 @@ $vmConfig = New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @para
 
 ## Create the virtual machine ##
 
-New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM $vmConfig 
+New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'southeastasia' -VM $vmConfig 
 
 
 ```
@@ -285,7 +285,7 @@ $parameters2 = @{
 
  Name = 'myPrivateEndpoint'
 
- Location = 'eastus'
+ Location = 'southeastasia'
 
  Subnet = $vnet.Subnets[0]
 
