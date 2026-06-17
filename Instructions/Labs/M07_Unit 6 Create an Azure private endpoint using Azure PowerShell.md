@@ -22,7 +22,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 - Below steps will guide you through creating the required resource group and web app.
 
-1. Find and open **parameters.json** in M07 folder. Open it in Notepad and find the line "value": "GEN-UNIQUE". Replace the placeholder GEN-UNIQUE string with a unique value for your webapp name. Save this change.
+1. Find and open **parameters.json** in M07 folder. Open it in Notepad and find the line "value": "GEN-UNIQUE". Replace the placeholder GEN-UNIQUE string with a unique value for your webapp name, and change the location value to 'southeastasia'. Save this change.
 
 > You could use a name, for example: (***mywebapp***) + initials (***dpb***) + today's date (***311023***) = **mywebappdpb311023** to create a globally unique name.
 
@@ -59,7 +59,7 @@ Deploy the following ARM templates to create the PremiumV2-tier Azure Web App ne
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
-If you receive an error (for example while looking into the Deployment status in the Portal) like "Website with given name GEN-UNIQUE already exists." please make sure to go to the Prerequisites mentioned above regarding editing the template.
+If you receive an error (for example while looking into the Deployment status in the Portal) like "Website with given name GEN-UNIQUE already exists. Or you get an error about quota limits." please make sure to go to the Prerequisites mentioned above regarding editing the template.
 
 ## Task 2: Create a virtual network and bastion host
 
