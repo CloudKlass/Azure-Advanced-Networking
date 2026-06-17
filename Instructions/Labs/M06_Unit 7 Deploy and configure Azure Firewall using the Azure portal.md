@@ -42,7 +42,7 @@ In this task, you will create a new resource group.
 
 1. On the **Basics** tab, in **Resource group**, enter **Test-FW-RG**.
 
-1. On the **Region**, select **(Europe) UK South**.
+1. On the **Region**, select **(Europe) UK West**.
 
    ![Create a resource group for Azure firewall](../media/create-resource-group-for-azure-firewall.png)
 
@@ -66,7 +66,7 @@ In this task, you will create a single virtual network with two subnets.
    | -------------------- | -------------------------------- |
    | Resource Group       | Select: **Test-FW-RG**            |
    | Virtual Network Name | **Test-FW-VN**                 |
-   | Location             | **(Europe) UK South**                          |
+   | Location             | **(Europe) UK West**                          |
 
 1. Click **Next**.
 
@@ -149,7 +149,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | Subscription         | Select your subscription                                     |
    | Resource group       | **Test-FW-RG**                                               |
    | Firewall name        | **Test-FW01**                                                |
-   | Region               | **UK South**                                                 |
+   | Region               | **UK West**                                                 |
    | Firewall SKU        | **Standard**                                                 |
    | Firewall management  | **Use a Firewall Policy to manage this firewall**            |
    | Firewall policy      | Select **Add new** |
@@ -159,7 +159,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Policy name | **fw-test-pol**
-   | Region | **UK South**|
+   | Region | **UK West**|
    |Policy tier | **Standard** |
 
 1. Click **OK** 
@@ -218,7 +218,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    | ------------------------ | ------------------------ |
    | Subscription             | Select your subscription |
    | Resource group           | **Test-FW-RG**           |
-   | Region                   | **UK South**           |
+   | Region                   | **UK West**           |
    | Name                     | **Firewall-route**       |
    | Propagate gateway routes | **Yes**                  |
 
