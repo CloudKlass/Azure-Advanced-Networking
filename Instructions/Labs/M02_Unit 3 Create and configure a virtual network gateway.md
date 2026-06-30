@@ -40,7 +40,7 @@ In this exercise, you will:
    ```powershell
    $RGName = "ContosoResourceGroup"
    #create resource group if it doesnt exist
-   New-AzResourceGroup -Name $RGName -Location "eastus"
+   New-AzResourceGroup -Name $RGName -Location "SouthEastAsia"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
@@ -58,7 +58,7 @@ In this exercise, you will:
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
-   |                 |                   | Region                                      | East US                      |
+   |                 |                   | Region                                      | SouthEast Asia                      |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | SKU                                         | VpnGw1AZ                       |
    |                 |                   | Generation                                  | Generation1                  |
