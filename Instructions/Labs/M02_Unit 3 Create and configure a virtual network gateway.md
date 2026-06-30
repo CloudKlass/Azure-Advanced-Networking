@@ -44,6 +44,9 @@ In this exercise, you will:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
+> **Note:** 
+> 
+>If the deployment fails due to a location not being available. You will need to edit the **azuredeploy.json** template to change the location that is not available.  Ask your instructor if you are not sure on how to do this.
 
 ## Task 2: Create CoreServicesVnet Gateway
 
