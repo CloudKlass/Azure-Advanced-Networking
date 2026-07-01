@@ -13,7 +13,7 @@ In this exercise, you will:
 
 + Task 1: Create CoreServicesVnet and ManufacturingVnet
 + Task 2: Create a Virtual WAN
-+ Task 33: Create a hub by using Azure Portal
++ Task 3: Create a hub by using Azure Portal
 + Task 4: Connect a VNet to the Virtual Hub
 + Task 5: Clean up resources
 
