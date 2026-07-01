@@ -20,7 +20,7 @@ In this unit, you will:
 + Task 5: Test the connection between the VMs
 + Task 6: Clean up resources
 
-#### Estimated time: 20 minutes
+### Estimated time: 20 minutes
 
 ## Task 1: Create a Virtual Machine to test the configuration
 
