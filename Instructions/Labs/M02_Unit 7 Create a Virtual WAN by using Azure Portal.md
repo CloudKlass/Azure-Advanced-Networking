@@ -17,7 +17,7 @@ In this exercise, you will:
 + Task 4: Connect a VNet to the Virtual Hub
 + Task 5: Clean up resources
 
-#### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
+### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet (If required)
 
